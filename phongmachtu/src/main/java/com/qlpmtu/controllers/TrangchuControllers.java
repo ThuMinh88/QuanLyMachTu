@@ -15,6 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.qlpmtu.service.DanhmucthuocService;
+import com.qlpmtu.service.ThuocService;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 /**
@@ -25,10 +27,13 @@ import com.qlpmtu.service.DanhmucthuocService;
 public class TrangchuControllers {
    @Autowired
    private DanhmucthuocService danhmucthuocService; 
+   @Autowired
+   private ThuocService thuocService;
     
     @RequestMapping("/")
-    public String index(Model model) {
+    public String index(Model model,@RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
        model.addAttribute("danhmucthuoc", this.danhmucthuocService.getDanhmucthuoc());
+       model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
        return "index";
     }
 }
