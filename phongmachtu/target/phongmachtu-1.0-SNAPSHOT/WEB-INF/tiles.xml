@@ -9,16 +9,17 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-    <!--Trang base-->
-    <definition name="baseLayout" template="/WEB-INF/layout/base.jsp">
+    <!--Trang base admin-->
+    <definition name="baseLayout" template="/WEB-INF/layout/admin/base.jsp">
         <put-attribute name="title" value="..." />
-        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
-        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
-        <put-attribute name="content" value="BASE"/>
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar.jsp" />
+        <put-attribute name="header" value="/WEB-INF/layout/admin/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/admin/footer.jsp" />
+        <put-attribute name="content" value="..."/>
     </definition>
     <!--Trang chủ-->
     <definition name="index" extends="baseLayout">
-        <put-attribute name="title" value="Phòng khám Oct"/>
+        <put-attribute name="title" value="OTC Admin - Dashboard"/>
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"/>
     </definition>
     
