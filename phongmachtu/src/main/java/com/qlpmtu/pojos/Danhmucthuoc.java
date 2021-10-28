@@ -19,6 +19,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "danhmucthuoc")
 public class Danhmucthuoc implements Serializable{
+
+   
     /**
      * @return the idDM
      */
@@ -26,7 +28,7 @@ public class Danhmucthuoc implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDM;
     private String tenDM;
-    private String mota;
+    private String moTa;
     
     public int getIdDM() {
         return idDM;
@@ -52,19 +54,18 @@ public class Danhmucthuoc implements Serializable{
     public void setTenDM(String tenDM) {
         this.tenDM = tenDM;
     }
-
     /**
-     * @return the mota
+     * @return the moTa
      */
-    public String getMota() {
-        return mota;
+    public String getMoTa() {
+        return moTa;
     }
 
     /**
-     * @param mota the mota to set
+     * @param moTa the moTa to set
      */
-    public void setMota(String mota) {
-        this.mota = mota;
+    public void setMoTa(String moTa) {
+        this.moTa = moTa;
     }
-    
+   
 }
