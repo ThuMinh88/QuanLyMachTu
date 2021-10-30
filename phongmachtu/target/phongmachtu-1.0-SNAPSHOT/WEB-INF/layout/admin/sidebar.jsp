@@ -3,7 +3,7 @@
     Created on : Oct 28, 2021, 10:26:03 PM
     Author     : ACER
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- Sidebar -->
@@ -46,10 +46,10 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Danh sách người dùng:</h6>
-                <a class="collapse-item" href="listU-patient.html">Bệnh nhân</a>
-                <a class="collapse-item" href="listU-doctor.html">Bác sĩ</a>
-                <a class="collapse-item" href="listU-nurse.html">Y tá</a>
-                <a class="collapse-item" href="listU-medicine.html">Thuốc</a>
+                <a class="collapse-item" href="admin-patient.html">Bệnh nhân</a>
+                <a class="collapse-item" href="admin-doctor.html">Bác sĩ</a>
+                <a class="collapse-item" href="admin-nurse.html">Y tá</a>
+                <a class="collapse-item" href="<c:url value="/admin-medicine"/>">Thuốc</a>
             </div>
         </div>
     </li>

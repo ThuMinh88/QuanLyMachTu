@@ -33,7 +33,6 @@ CREATE TABLE `admin` (
   `diachi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `chucvu` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bangcap` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kinhnghiem` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_admin_taikhoan` FOREIGN KEY (`id`) REFERENCES `taikhoan` (`idTK`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -60,11 +59,12 @@ CREATE TABLE `bacsi` (
   `ho` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ten` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gioitinh` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chucvu` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chuyenkhoa` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sodienthoai` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `namsinh` date DEFAULT NULL,
   `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `diachi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chucvu` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `bangcap` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kinhnghiem` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`idBS`),
@@ -78,6 +78,18 @@ CREATE TABLE `bacsi` (
 
 LOCK TABLES `bacsi` WRITE;
 /*!40000 ALTER TABLE `bacsi` DISABLE KEYS */;
+INSERT INTO `bacsi` VALUES (1,'Nguyễn Tiến','Đạt', 'Nam', 'Trưởng Khoa Da Liễu', 'Da Liễu', '03254621851','1888','ngtien@gmail.com','Bình Thạnh, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec Nha Trang'),
+							(2,'Hoàng Thi','Xuân', 'Nữ', 'Phó Khoa Da Liễu', 'Da Liễu', '03254621852','1896','htxuan@gmail.com','Gò vấp, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Hạnh Phúc'),
+                            (3,'Huỳnh Tiến','Lư', 'Nam', 'Chủ tịch Hội đồng Khoa', 'Da Liễu', '06654621456','1988','huynhtien@gmail.com', 'Bình Thạnh, Tp HCM','Thạc sĩ- Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
+							(4,'Nguyễn Sương','Ngoa', 'Nữ', 'Phó trưởng cấp cứu', 'Nội tổng quát', '09954621523','1991', 'suongNgoa@gmail.com','Bình Thạnh, Tp HCM','Bác sĩ - Bác sĩ' ,'Phó Trưởng Khoa Cấp Cứu 24H, Bệnh viện Quốc tế Hạnh Phúc'),
+                            (5,'Mai Tiến','Hợp', 'Nữ', 'Trưởng Khoa', 'Nội tổng quát', '06654621456','1885','mtienHop@gmail.com', 'Quận 5, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
+                            (6,'Xuân Hữu','Nghị', 'Nam', 'Phó Khoa hô hấp', 'Hô Hấp', '06754624789','1878','huunghi@gmail.com', 'Quận 7, Tp HCM','Thạc sĩ - Bác sĩ' ,'Bệnh viện Mỹ Đức'),
+                            (7,'Hồng Bắc','In', 'Nam', 'Trưởng Khoa hô hấp', 'Hô Hấp', '06754624895','1877','hongbin@gmail.com', 'Quận 8, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Hạnh Phúc'),
+                            (8,'Đào Văn','Xiêu', 'Nam', 'Trưởng Khoa thần kinh', 'Thần Kinh', '06754624123','1879','hongbin@gmail.com', 'Quận 10, Tp HCM','Giáo sư' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
+                            (9,'Nguyễn Ngọc','Hồng', 'Nữ', 'Phó Chủ tịch Hội đồng Khoa', 'Chẩn đoán hình ảnh', '08924624123','1800','honghong@gmail.com', 'Quận Bình Chiểu, Tp Thủ Đức','Bác sĩ' ,'Bệnh viện Quốc tế Hạnh Phúc'),
+                            (10,'Nguyễn Hoa','Nữ', 'Nữ', 'Trưởng khoa Chẩn đoán hình ảnh', 'Chẩn đoán hình ảnh', '09924612343','1967','hoanu0@gmail.com', 'Quận 4, Tp HCM','Bác sĩ' ,'Bệnh viện Quốc tế Hạnh Phúc'),
+                            (11,'Mai Tiến','Hợp', 'Nữ', 'Trưởng Khoa Tai-Mũi-Họng', 'Tai-Mũi-Họng', '06654621456','1885','mtienHop85@gmail.com', 'Quận 5, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
+                            (12,'Xuân Hữu','Nghị', 'Nam', 'Phó Khoa Tai-Mũi-Họng', 'Tai-Mũi-Họng', '06754624789','1882','huunghi82@gmail.com', 'Quận 7, Tp HCM','Thạc sĩ - Bác sĩ' ,'Bệnh viện Mỹ Đức');
 /*!40000 ALTER TABLE `bacsi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,11 +132,11 @@ CREATE TABLE `benhnhan` (
   `idBN` int NOT NULL AUTO_INCREMENT,
   `hoBN` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `tenBN` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `gioitinh` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
   `sodienthoai` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `namsinh` date DEFAULT NULL,
   `email` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `diachi` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `gioitinh` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `namsinh` date DEFAULT NULL,
   `anhdaidien` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `benhan` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`idBN`),
@@ -138,6 +150,16 @@ CREATE TABLE `benhnhan` (
 
 LOCK TABLES `benhnhan` WRITE;
 /*!40000 ALTER TABLE `benhnhan` DISABLE KEYS */;
+INSERT INTO `bacsi` VALUES (1,'Nguyễn Xuân','Tiến', 'Nam', '03254621851','1888','ngtien@gmail.com','Quận Bình Chiểu, Tp Thủ Đức','/images/uploads/1-nam.png' ,'Sốt - ho khan'),
+							(2,'Hoàng Nguyễn Thi','Lư', 'Nữ', '03254621852','1896','htLu@gmail.com','Gò vấp, Tp HCM','/images/uploads/1-nam.png' ,'Viêm mũi dị ứng'),
+                            (3,'Huỳnh Tiến','Nam', 'Nam', '06654621456','1988','huynhtiennam@gmail.com', 'Bình Thạnh, Tp HCM','/images/uploads/1-nam.png' ,'Nổi mề đay'),
+							(4,'Hoàng Sương','Hoa', 'Nữ', '09954621523','1991', 'hsuonghoa@gmail.com','Quận 8, Tp HCM','/images/uploads/1-nam.png' ,'Viêm da cơ địa'),
+                            (5,'Mai Thi','Sương', 'Nữ','06654621456','1885','msuong@gmail.com', 'Quận 10, Tp HCM','/images/uploads/1-nam.png' ,'Viêm xoang'),
+                            (6,'Hoàng Hữu','Phúc', 'Nam','06754624789','1878','huuphuc@gmail.com', 'Quận 7, Tp HCM','/images/uploads/1-nam.png' ,'Loãng cơ xương'),
+                            (7,'Đào Bắc','Xiêu', 'Nam', '06754624895','1877','xieubn@gmail.com', 'Bình quới, Tp Cần Thơ','/images/uploads/1-nam.png' ,'Chứng đỏ mặt'),
+                            (8,'Đào Văn','Hoàng', 'Nam', '06754624123','1879','namdao@gmail.com', 'Quận 5, Tp HCM','/images/uploads/1-nam.png' ,'Sốt - ho khan'),
+                            (9,'Nguyễn Nữ','Quỳnh', 'Nữ', '08924624123','1800','hongquynh@gmail.com', 'Bình Thạnh, Tp HCM','/images/uploads/1-nam.png' ,'Chứng trầm cảm'),
+                            (10,'Nguyễn Hoa',' Ngọc', 'Nữ', '09924612343','1967','hoanu0@gmail.com', 'Quận 4, Tp HCM','/images/uploads/1-nam.png' ,'Viêm da cơ địa');
 /*!40000 ALTER TABLE `benhnhan` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  *
  * @author DAO
  */
-@Controller 
+@Controller
 public class TrangchuControllers {
    @Autowired
    private DanhmucthuocService danhmucthuocService; 
@@ -36,4 +36,11 @@ public class TrangchuControllers {
        model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
        return "index";
     }
+    
+//    @RequestMapping("/medicine")
+//    public String medicine(Model model,@RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
+//       model.addAttribute("danhmucthuoc", this.danhmucthuocService.getDanhmucthuoc());
+//       model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
+//       return "admin-medicine";
+//    }
 }
