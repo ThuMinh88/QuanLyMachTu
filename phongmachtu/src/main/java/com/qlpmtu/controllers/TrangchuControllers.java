@@ -14,9 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.qlpmtu.service.DanhmucthuocService;
 import com.qlpmtu.service.ThuocService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import com.qlpmtu.service.DanhMucThuocService;
 
 
 /**
@@ -25,22 +26,39 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class TrangchuControllers {
-   @Autowired
-   private DanhmucthuocService danhmucthuocService; 
-   @Autowired
-   private ThuocService thuocService;
-    
-    @RequestMapping("/")
-    public String index(Model model,@RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
-       model.addAttribute("danhmucthuoc", this.danhmucthuocService.getDanhmucthuoc());
-       model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
-       return "index";
-    }
-    
-//    @RequestMapping("/medicine")
-//    public String medicine(Model model,@RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
-//       model.addAttribute("danhmucthuoc", this.danhmucthuocService.getDanhmucthuoc());
-//       model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
-//       return "admin-medicine";
+   
+     @GetMapping("/")
+     public String indexAD(Model model){
+         return "index";
+     }
+     
+     @GetMapping("/admin-patient")
+     public String patientAD(){
+         return "admin-patient";
+     }
+     
+     @GetMapping("/admin-doctor")
+     public String doctorAD(){
+         return "admin-doctor";
+     }
+     
+     @GetMapping("/admin-nurse")
+     public String nurseAD(){
+         return "admin-nurse";
+     }
+     
+     @GetMapping("/admin-medicine/")
+     public String medicineAD(){
+         return "admin-medicine";
+     }
+//     
+//    @RequestMapping("/")
+//    public String index(Model model) {
+//       Session s = sessionFactory.getObject().openSession();
+//       Query q = s.createQuery("From Danhmucthuoc");
+//       model.addAttribute("danhmuct", q.getResultList());
+//       s.close();
+//       return "index";
 //    }
+     
 }

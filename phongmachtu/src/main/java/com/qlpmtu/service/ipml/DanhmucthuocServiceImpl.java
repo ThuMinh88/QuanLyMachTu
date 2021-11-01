@@ -5,24 +5,27 @@
  */
 package com.qlpmtu.service.ipml;
 
-import com.qlpmtu.pojos.Danhmucthuoc;
+import com.qlpmtu.pojos.DanhMucThuoc;
+import com.qlpmtu.repository.DanhMucThuocRepository;
+import com.qlpmtu.service.DanhMucThuocService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.qlpmtu.service.DanhmucthuocService;
-import com.qlpmtu.repository.DanhmucthuocRepository;
 
 /**
  *
  * @author DAO
- */@Service
-public class DanhmucthuocServiceImpl implements DanhmucthuocService{
+ */
+@Service
+public class DanhMucThuocServiceImpl implements DanhMucThuocService{
     @Autowired
-    private DanhmucthuocRepository danhmucthuocRepository;
-    
+    private DanhMucThuocRepository danhMucThuocRepository;
+
     @Override
-    public List<Danhmucthuoc> getDanhmucthuoc() {
-        return this.danhmucthuocRepository.getDanhmucthuoc();
+    public List<DanhMucThuoc> getDanhMucThuocs() {
+        return this.danhMucThuocRepository.getDanhMucThuocs();
     }
+   
+
     
 }

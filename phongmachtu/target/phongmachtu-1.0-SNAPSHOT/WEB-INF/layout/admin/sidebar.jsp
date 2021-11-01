@@ -46,10 +46,10 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Danh sách người dùng:</h6>
-                <a class="collapse-item" href="admin-patient.html">Bệnh nhân</a>
-                <a class="collapse-item" href="admin-doctor.html">Bác sĩ</a>
-                <a class="collapse-item" href="admin-nurse.html">Y tá</a>
-                <a class="collapse-item" href="<c:url value="/admin-medicine"/>">Thuốc</a>
+                <a class="collapse-item" href="<c:url value="/admin-patient" />">Bệnh nhân</a>
+                <a class="collapse-item" href="<c:url value="/admin-doctor" />">Bác sĩ</a>
+                <a class="collapse-item" href="<c:url value="/admin-nurse" />">Y tá</a>
+                <a class="collapse-item" href="<c:url value="/admin-medicine" />">Thuốc</a>
             </div>
         </div>
     </li>

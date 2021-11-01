@@ -5,6 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -31,17 +34,6 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Mã</th>
-                            <th>Tên thuốc</th>
-                            <th>Số lượng</th>
-                            <th>Hạn sử dụng</th>
-                            <th>Giá bán</th>
-                            <th>Loại thuốc</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <j:forEach var="t" items="${thuoc}">
                         <tr>
@@ -50,7 +42,7 @@
                             <td>${t.soLuong}</td>
                             <td>${t.hanSuDung}</td>
                             <td>${t.giaBan}</td>
-                            <td>${t.danhMucThuoc}</td>
+                            <td>${t.danhMucThuoc.tenDM}</td>
                             <td class="align-items-center d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" role="button">...</td>
                         </tr>
                         </j:forEach>
@@ -78,13 +70,14 @@
                     <div class="card border-left-success shadow h-100 py-2">
                         <div class="card-body">
                             <div class="row no-gutters text-center">
-                                <div class="col-auto mb-4">
+<!--                                <div class="col-auto mb-4">
                                     <img class="img-profile rounded mx-auto d-block align-items-center" width="50%" src="1.jpg" alt="logo" >
-                                </div>
+                                </div>-->
+                                <j:forEach var="t" items="${thuoc}">
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         Loại Thuốc gì đó</div>
-                                    <div class="h5 mb-1 font-weight-bold text-gray-800">Tên thuốc</div>
+                                    <div class="h5 mb-1 font-weight-bold text-gray-800">${t.tenThuoc}</div>
                                 </div>
                                 <!-- Divider -->
             
@@ -92,17 +85,17 @@
                                     <hr class="sidebar-divider my-0 mb-4">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                         Số lượng</div>
-                                    <div class="h7 mb-4 font-weight-bold text-gray-800">20000</div>
+                                    <div class="h7 mb-4 font-weight-bold text-gray-800">${t.soLuong}</div>
                                 </div>
                                 <div class="col-lg-12 mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                         Giá bán</div>
-                                    <div class="h7 mb-4 font-weight-bold text-gray-800">20000đ</div>
+                                    <div class="h7 mb-4 font-weight-bold text-gray-800">${t.giaBan}</div>
                                 </div>
                                 <div class="col-lg-12 mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                         Hạn sử dụng</div>
-                                    <div class="h7 mb-4 font-weight-bold text-gray-800">20 năm</div>
+                                    <div class="h7 mb-4 font-weight-bold text-gray-800">${t.hanSuDung}</div>
                                 </div>
                                 <div class="col-lg-12 mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
@@ -112,9 +105,9 @@
                                 <div class="col-lg-12 mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                         Mô tả</div>
-                                    <div class="h7 mb-4 font-weight-bold text-gray-800">CTY ....</div>
+                                    <div class="h7 mb-4 font-weight-bold text-gray-800">${t.moTa}</div>
                                 </div>
-
+                                </j:forEach>
                             </div>
                         </div>
                     </div>

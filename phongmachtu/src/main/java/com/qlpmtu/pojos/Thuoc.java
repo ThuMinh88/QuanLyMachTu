@@ -5,6 +5,7 @@
  */
 package com.qlpmtu.pojos;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Column;
@@ -24,7 +25,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "thuoc")
-public class Thuoc {
+public class Thuoc implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,7 +44,7 @@ public class Thuoc {
     private String moTa;
     @ManyToOne
     @JoinColumn(name = "idDMT")
-    private Danhmucthuoc danhMucThuoc;
+    private DanhMucThuoc danhMucThuoc;
     @ManyToOne
     @JoinColumn(name = "idNCC")
     private Nhacungcap nhaCungCap;
@@ -134,14 +135,14 @@ public class Thuoc {
     /**
      * @return the danhMucThuoc
      */
-    public Danhmucthuoc getDanhMucThuoc() {
+    public DanhMucThuoc getDanhMucThuoc() {
         return danhMucThuoc;
     }
 
     /**
      * @param danhMucThuoc the danhMucThuoc to set
      */
-    public void setDanhMucThuoc(Danhmucthuoc danhMucThuoc) {
+    public void setDanhMucThuoc(DanhMucThuoc danhMucThuoc) {
         this.danhMucThuoc = danhMucThuoc;
     }
 

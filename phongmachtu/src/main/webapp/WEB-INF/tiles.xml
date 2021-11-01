@@ -17,11 +17,27 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="footer" value="/WEB-INF/layout/admin/footer.jsp" />
         <put-attribute name="content" value="..."/>
     </definition>
+    
     <!--Trang chủ-->
     <definition name="index" extends="baseLayout">
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"/>
     </definition>
     
+    <!--Trang admin bệnh nhân-->
+    <definition name="admin-patient" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-patient.jsp"/>
+    </definition>
+    
+    <!--Trang admin bác sĩ-->
+    <definition name="admin-doctor" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-doctor.jsp"/>
+    </definition>
+    
+    <!--Trang admin y tá-->
+    <definition name="admin-nurse" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-nurse.jsp"/>
+    </definition>
+
     <!--Trang admin thuốc-->
     <definition name="admin-medicine" extends="baseLayout">
         <put-attribute name="content" value="/WEB-INF/jsp/admin-medicine.jsp"/>

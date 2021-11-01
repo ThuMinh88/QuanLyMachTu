@@ -5,13 +5,13 @@
  */
 package com.qlpmtu.service;
 
-import com.qlpmtu.pojos.Danhmucthuoc;
+import com.qlpmtu.pojos.DanhMucThuoc;
 import java.util.List;
 
 /**
  *
  * @author DAO
  */
-public interface DanhmucthuocService {
-    List<Danhmucthuoc> getDanhmucthuoc();
+public interface DanhMucThuocService {
+    List<DanhMucThuoc> getDanhMucThuocs();
 }
