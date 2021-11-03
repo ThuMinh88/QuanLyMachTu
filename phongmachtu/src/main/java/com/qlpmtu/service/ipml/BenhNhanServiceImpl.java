@@ -22,8 +22,8 @@ public class BenhNhanServiceImpl implements BenhNhanService{
     private BenhNhanRepository benhNhanRepository;
 
     @Override
-    public List<BenhNhan> getBenhNhan() {
-        return this.benhNhanRepository.getBenhNhan();
+    public List<BenhNhan> getBenhNhans() {
+        return this.benhNhanRepository.getBenhNhans();
     }
     
 }

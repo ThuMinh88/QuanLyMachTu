@@ -25,19 +25,7 @@ public class MedicineControllers {
     private DanhMucThuocService danhMucThuocService;
     @Autowired
     private ThuocService thuocService;
-
-//         
-//     @GetMapping("/phongmachtu/admin-medicine")
-//     public String medicineAD(Model model){
-//         return "admin-medicine";
-//     }
     
-//    @GetMapping("/admin-medicine")
-//    public String Thuoc(Model model, @RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
-//        model.addAttribute("danhmucthuoc", this.danhMucThuocService.getDanhMucThuocs());
-//        model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
-//        return "admin-medicine";
-  //  }
     @GetMapping("/admin-medicine")
     public String Thuoc(Model model, @RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
         model.addAttribute("danhmucthuoc", this.danhMucThuocService.getDanhMucThuocs());

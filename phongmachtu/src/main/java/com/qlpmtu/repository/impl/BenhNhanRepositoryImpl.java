@@ -20,14 +20,15 @@ import org.springframework.transaction.annotation.Transactional;
  * @author ACER
  */
 @Repository
-public class BenhNhanRepositoryImpl implements BenhNhanRepository{
+public class BenhNhanRepositoryImpl implements BenhNhanRepository {
+
     @Autowired
     private LocalSessionFactoryBean sessionFactory;
 
     @Override
     @Transactional
-    public List<BenhNhan> getBenhNhan() {
-Session s = sessionFactory.getObject().getCurrentSession();
+    public List<BenhNhan> getBenhNhans() {
+        Session s = sessionFactory.getObject().getCurrentSession();
         Query q = s.createQuery("From BenhNhan");
         return q.getResultList();
     }

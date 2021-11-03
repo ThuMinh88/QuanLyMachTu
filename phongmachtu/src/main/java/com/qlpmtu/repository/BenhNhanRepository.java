@@ -13,5 +13,5 @@ import java.util.List;
  * @author ACER
  */
 public interface BenhNhanRepository {
-    List<BenhNhan> getBenhNhan();
+    List<BenhNhan> getBenhNhans();
 }

@@ -5,6 +5,7 @@
  */
 package com.qlpmtu.pojos;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,8 +24,8 @@ import javax.persistence.TemporalType;
  * @author ACER
  */
 @Entity
-@Table(name="thuoc")
-public class BenhNhan {
+@Table(name="benhnhan")
+public class BenhNhan{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,28 +33,30 @@ public class BenhNhan {
     private int idBenhNhan;
     
     @Column(name = "hoBN")
-    private int hoBenhNhan;
+    private String hoBenhNhan;
     
     @Column(name = "tenBN")
-    private int tenBenhNhan;
+    private String tenBenhNhan;
     
     @Column(name = "gioitinh")
-    private int gioiTinh;
+    private String gioiTinh;
     
     @Column(name = "sodienthoai")
-    private int sdt;
+    private String sdt;
     
     @Column(name = "namsinh")
-    private int namSinh;
+    private Date namSinh;
     
     @Column(name = "email")
-    private int email;
+    private String email;
     
-    @Column(name = "anhdaidien")
-    private int avt;
+    private String diachi;
+//    
+//    @Column(name = "anhdaidien")
+//    private String avt;
     
     @Column(name = "benhan")
-    private int benhAn;
+    private String benhAn;
 
     /**
      * @return the idBenhNhan
@@ -72,113 +75,127 @@ public class BenhNhan {
     /**
      * @return the hoBenhNhan
      */
-    public int getHoBenhNhan() {
+    public String getHoBenhNhan() {
         return hoBenhNhan;
     }
 
     /**
      * @param hoBenhNhan the hoBenhNhan to set
      */
-    public void setHoBenhNhan(int hoBenhNhan) {
+    public void setHoBenhNhan(String hoBenhNhan) {
         this.hoBenhNhan = hoBenhNhan;
     }
 
     /**
      * @return the tenBenhNhan
      */
-    public int getTenBenhNhan() {
+    public String getTenBenhNhan() {
         return tenBenhNhan;
     }
 
     /**
      * @param tenBenhNhan the tenBenhNhan to set
      */
-    public void setTenBenhNhan(int tenBenhNhan) {
+    public void setTenBenhNhan(String tenBenhNhan) {
         this.tenBenhNhan = tenBenhNhan;
     }
 
     /**
      * @return the gioiTinh
      */
-    public int getGioiTinh() {
+    public String getGioiTinh() {
         return gioiTinh;
     }
 
     /**
      * @param gioiTinh the gioiTinh to set
      */
-    public void setGioiTinh(int gioiTinh) {
+    public void setGioiTinh(String gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
 
     /**
      * @return the sdt
      */
-    public int getSdt() {
+    public String getSdt() {
         return sdt;
     }
 
     /**
      * @param sdt the sdt to set
      */
-    public void setSdt(int sdt) {
+    public void setSdt(String sdt) {
         this.sdt = sdt;
     }
 
     /**
      * @return the namSinh
      */
-    public int getNamSinh() {
+    public Date getNamSinh() {
         return namSinh;
     }
 
     /**
      * @param namSinh the namSinh to set
      */
-    public void setNamSinh(int namSinh) {
+    public void setNamSinh(Date namSinh) {
         this.namSinh = namSinh;
     }
 
     /**
      * @return the email
      */
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
     /**
      * @param email the email to set
      */
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
     /**
      * @return the avt
-     */
-    public int getAvt() {
-        return avt;
-    }
+//     */
+//    public String getAvt() {
+//        return avt;
+//    }
 
     /**
      * @param avt the avt to set
-     */
-    public void setAvt(int avt) {
-        this.avt = avt;
-    }
+//     */
+//    public void setAvt(String avt) {
+//        this.avt = avt;
+//    }
 
     /**
      * @return the benhAn
      */
-    public int getBenhAn() {
+    public String getBenhAn() {
         return benhAn;
     }
 
     /**
      * @param benhAn the benhAn to set
      */
-    public void setBenhAn(int benhAn) {
+    public void setBenhAn(String benhAn) {
         this.benhAn = benhAn;
     }
-    
+
+    /**
+     * @return the diachi
+     */
+    public String getDiachi() {
+        return diachi;
+    }
+
+    /**
+     * @param diachi the diachi to set
+     */
+    public void setDiachi(String diachi) {
+        this.diachi = diachi;
+    }
+
 }
