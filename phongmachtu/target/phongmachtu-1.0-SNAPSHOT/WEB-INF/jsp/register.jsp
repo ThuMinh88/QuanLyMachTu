@@ -46,12 +46,13 @@
             <div class="pom-agile">
                 
             </div>
+            <c:if test="${pageContext.request.userPrincipal.name == null}">
             <div class="sub-w3l">
                 <h6><a href="<c:url value="/login"/>">Đã có tài khoản?</a></h6>
               <div class="right-w3l">
                 <input type="submit" value="Đăng kí">
               </div>
-            </div>
+            </div></c:if>
           </form>
         </div>
       </div>

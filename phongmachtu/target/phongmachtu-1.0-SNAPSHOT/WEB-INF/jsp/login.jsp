@@ -28,10 +28,12 @@
                 <c:url value="/login" var="action" />
                 <form action="${action}" method="post" class="user">
                     <div class="col-sm-10 pom-agile form-group">
+                        <label for="username">Username</label>
                         <input placeholder="Tên đăng nhập" name="username" id="username" class="form-control" type="text" >
                         <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
                     </div>
                     <div class="pom-agile col-sm-8 form-group">
+                        <label for="password">Password</label>
                         <input placeholder="Password" type="password" id="password" name="password" class="form-control">
                         <span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
                     </div>

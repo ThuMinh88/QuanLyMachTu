@@ -16,7 +16,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UserController {
     @GetMapping("/login")
-     public String login(Model model){
+     public String login(){
          return "login";
+     }
+     
+     @GetMapping("/appointment")
+     public String appointment(Model model){
+         return "appointment";
      }
 }

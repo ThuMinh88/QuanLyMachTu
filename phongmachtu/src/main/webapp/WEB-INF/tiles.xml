@@ -43,6 +43,11 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/jsp/register.jsp"/>
     </definition>
     
+    <!--Trang Đăng kí-->
+    <definition name="appointment" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/appointment.jsp"/>
+    </definition>
+    
     <!--Trang chủ-->
     <definition name="admin-index" extends="baseLayout">
         <put-attribute name="content" value="/WEB-INF/jsp/admin-index.jsp"/>

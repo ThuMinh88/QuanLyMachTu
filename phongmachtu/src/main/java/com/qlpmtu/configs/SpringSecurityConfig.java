@@ -52,7 +52,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username")
                 .passwordParameter("password");
         
-        http.formLogin().defaultSuccessUrl("/").failureUrl("/login?error");
+        http.formLogin().defaultSuccessUrl("/appointment").failureUrl("/login?error");
 //        http.formLogin().successHandler(this.loginSuccessHandler);
 //        
 ////        http.logout().logoutSuccessUrl("/login");
@@ -71,7 +71,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public Cloudinary cloudinary(){
         Cloudinary c = new Cloudinary(ObjectUtils.asMap(
-                "cloud_name", "minht-thu",
+                "cloud_name", "minh-thu",
                 "api_key", "873584343834566",
                 "api_secret","NQFslJoRHx0qQ16n6eM3j0-WTSI",
                 "secure",true
