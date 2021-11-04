@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserReponsitory userReponsitory;
 
+
     @Override
     public boolean addUser(User user) {
         return this.userReponsitory.addUser(user);

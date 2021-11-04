@@ -30,8 +30,10 @@ com\qlpmtu\repository\BacSiRepository.class
 com\qlpmtu\pojos\LoaiTaiKhoan.class
 com\qlpmtu\repository\impl\BacSiReponsitoryImpl.class
 com\qlpmtu\configs\SpringSecurityConfig.class
+com\qlpmtu\repository\PhieuKhamBenhRepository.class
 com\qlpmtu\service\ipml\UserServiceImpl.class
 com\qlpmtu\controllers\HomeControllers.class
+com\qlpmtu\pojos\ChiTietDonThuoc.class
 com\qlpmtu\service\ipml\ThuocServiceImpl.class
 com\qlpmtu\service\BenhNhanService.class
 com\qlpmtu\pojos\BenhNhan.class

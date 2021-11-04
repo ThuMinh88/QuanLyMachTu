@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -51,9 +52,10 @@ public class BenhNhan{
     private String email;
     
     private String diachi;
-//    
-//    @Column(name = "anhdaidien")
-//    private String avt;
+    
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User userID;
     
     @Column(name = "benhan")
     private String benhAn;
@@ -196,6 +198,34 @@ public class BenhNhan{
      */
     public void setDiachi(String diachi) {
         this.diachi = diachi;
+    }
+//
+//    /**
+//     * @return the userId
+//     */
+//    public User getUserId() {
+//        return userId;
+//    }
+//
+//    /**
+//     * @param userId the userId to set
+//     */
+//    public void setUserId(User userId) {
+//        this.userId = userId;
+//    }
+
+    /**
+     * @return the userID
+     */
+    public User getUserID() {
+        return userID;
+    }
+
+    /**
+     * @param userID the userID to set
+     */
+    public void setUserID(User userID) {
+        this.userID = userID;
     }
 
 }

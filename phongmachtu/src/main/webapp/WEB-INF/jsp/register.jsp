@@ -30,18 +30,18 @@
                     placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control form-control-user"
-                        id="exampleInputPassword" placeholder="Password">
+                <input type="username" class="form-control form-control-user"
+                        id="exampleInputPassword" placeholder="Username">
             </div>
-            <div class="form-group row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="form-group">
+<!--                <div class="col-sm-6 mb-3 mb-sm-0">-->
                     <input type="password" class="form-control form-control-user"
                         id="exampleInputPassword" placeholder="Password">
-                </div>
-                <div class="col-sm-6">
+                <!--</div>-->
+<!--                <div class="col-sm-6">
                     <input type="password" class="form-control form-control-user"
                         id="exampleRepeatPassword" placeholder="Repeat Password">
-                </div>
+                </div>-->
             </div>
             <div class="pom-agile">
                 

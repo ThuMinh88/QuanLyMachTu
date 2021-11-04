@@ -11,6 +11,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,7 +28,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idTK;
     private String ho;
     private String ten;
     private String gioitinh;
@@ -39,19 +42,22 @@ public class Admin {
     private String chucvu;
     private String bangcap;
     private String kinhnghiem;
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User userID;
 
     /**
      * @return the id
      */
     public int getId() {
-        return id;
+        return idTK;
     }
 
     /**
      * @param id the id to set
      */
     public void setId(int id) {
-        this.id = id;
+        this.idTK = id;
     }
 
     /**
@@ -193,4 +199,19 @@ public class Admin {
     public void setKinhnghiem(String kinhnghiem) {
         this.kinhnghiem = kinhnghiem;
     }
+
+    /**
+     * @return the userID
+     */
+    public User getUserID() {
+        return userID;
+    }
+
+    /**
+     * @param userID the userID to set
+     */
+    public void setUserID(User userID) {
+        this.userID = userID;
+    }
+
 }

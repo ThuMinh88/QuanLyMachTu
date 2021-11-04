@@ -13,7 +13,11 @@
         <h2>Đăng kí khám bệnh</h2>
       </div>
 
+<<<<<<< Updated upstream
       <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+=======
+      <form action="" method="post" role="form">
+>>>>>>> Stashed changes
         <div class="form-row">
           <div class="col-md-4 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Họ và tên đệm" data-rule="minlen:4" data-msg="Please enter at least 4 chars">

@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: qlpm
 -- ------------------------------------------------------
--- Server version	8.0.22
+-- Server version	8.0.23
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,19 +24,21 @@ DROP TABLE IF EXISTS `admin`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `admin` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `ho` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ten` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gioitinh` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sodienthoai` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ho` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ten` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gioitinh` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sodienthoai` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `namsinh` date DEFAULT NULL,
-  `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diachi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chucvu` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bangcap` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kinhnghiem` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chucvu` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bangcap` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kinhnghiem` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_admin_taikhoan` FOREIGN KEY (`id`) REFERENCES `taikhoan` (`idTK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `fk_admin_taikhoan` (`user_id`),
+  CONSTRAINT `fk_admin_taikhoan` FOREIGN KEY (`user_id`) REFERENCES `taikhoan` (`idTK`)
+) ENGINE=InnoDB AUTO_INCREMENT=21010007 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,13 +47,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` (`id`,`ho`,`ten`,`gioitinh`,`sodienthoai`,`namsinh`,`email`,`diachi`,`chucvu`,`bangcap`,`kinhnghiem`) VALUES (21010001,'Lê Thị','Hảo','Nữ','03254621851','1888-12-09','lthao@gmail.com','Bình Thạnh, Tp HCM','Giám Đốc Y Khoa','Tiến sĩ Y học, Đại học Y Dược TP.HCM','42 năm kinh nghiệm Quản lý Y tế');
-INSERT INTO `admin` (`id`,`ho`,`ten`,`gioitinh`,`sodienthoai`,`namsinh`,`email`,`diachi`,`chucvu`,`bangcap`,`kinhnghiem`) VALUES (21010002,'Nguyễn Tấn','Xún','Nam','03254621852','1896-11-05','nguyenxun@gmail.com','Gò vấp, Tp HCM','Phó Giám Đốc Y Khoa','Bác sỹ Đa khoa tổng quát, ĐH Y Huế','30 năm kinh nghiệm Quản lý Y tế');
-INSERT INTO `admin` (`id`,`ho`,`ten`,`gioitinh`,`sodienthoai`,`namsinh`,`email`,`diachi`,`chucvu`,`bangcap`,`kinhnghiem`) VALUES (21010003,'Nguyễn Văn','Lập','Nam','06654621456','1988-05-09','lapvh@gmail.com','Bình Thạnh, Tp HCM','BS.CK1','Bác sỹ Y khoa, Đại học Y Dược Tp.HCM','28 năm kinh nghiệm Quản lý Y tế');
-INSERT INTO `admin` (`id`,`ho`,`ten`,`gioitinh`,`sodienthoai`,`namsinh`,`email`,`diachi`,`chucvu`,`bangcap`,`kinhnghiem`) VALUES (21010004,'Đào Đức','Tiến','Nam','09954621523','1991-08-29','tiendao@gmail.com','Bình Thạnh, Tp HCM','Chủ tịch Hội đồng chuyên khoa Nhi','Bác sĩ chuyên khoa II – Nhi, Đại học Y Dược Tp.HCM','Hơn 40 năm kinh nghiệm trong lĩnh vực Nhi Kho');
-INSERT INTO `admin` (`id`,`ho`,`ten`,`gioitinh`,`sodienthoai`,`namsinh`,`email`,`diachi`,`chucvu`,`bangcap`,`kinhnghiem`) VALUES (21010005,'Mai Tiến','Nghị','Nam','06654621456','1885-12-09','liennghi@gmail.com','Quận 5, Tp HCM','Thư ký Hội đồng chuyên khoa Nhi','Thạc sỹ chuyên ngành Nhi khoa, Đại học Y Dược Tp.HCM','17 năm kinh nghiệm');
-INSERT INTO `admin` (`id`,`ho`,`ten`,`gioitinh`,`sodienthoai`,`namsinh`,`email`,`diachi`,`chucvu`,`bangcap`,`kinhnghiem`) VALUES (21010006,'Huỳnh Thị','Hoa','Nữ','0325465845','1875-08-23','huynhhoa@gmail.com','Quận 7, Tp HCM','Thư ký Hội đồng chuyên khoa','Thạc sỹ chuyên ngành Nhi khoa, Đại học Y Dược Tp.HCM','35 năm kinh nghiệm');
-
+INSERT INTO `admin` VALUES (21010001,'Lê Thị','Hảo','Nữ','03254621851','1888-12-09','lthao@gmail.com','Bình Thạnh, Tp HCM','Giám Đốc Y Khoa','Tiến sĩ Y học, Đại học Y Dược TP.HCM','42 năm kinh nghiệm Quản lý Y tế',1),(21010002,'Nguyễn Tấn','Xún','Nam','03254621852','1896-11-05','nguyenxun@gmail.com','Gò vấp, Tp HCM','Phó Giám Đốc Y Khoa','Bác sỹ Đa khoa tổng quát, ĐH Y Huế','30 năm kinh nghiệm Quản lý Y tế',2);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,20 +60,22 @@ DROP TABLE IF EXISTS `bacsi`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `bacsi` (
   `idBS` int NOT NULL AUTO_INCREMENT,
-  `ho` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ten` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gioitinh` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chucvu` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chuyenkhoa` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sodienthoai` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ho` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ten` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gioitinh` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chucvu` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chuyenkhoa` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sodienthoai` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `namsinh` date DEFAULT NULL,
-  `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diachi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bangcap` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kinhnghiem` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bangcap` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kinhnghiem` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
   PRIMARY KEY (`idBS`),
-  CONSTRAINT `fk_bacsi_taikhhoan` FOREIGN KEY (`idBS`) REFERENCES `taikhoan` (`idTK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `fk_bacsi_taikhoan` (`user_id`),
+  CONSTRAINT `fk_bacsi_taikhoan` FOREIGN KEY (`user_id`) REFERENCES `taikhoan` (`idTK`)
+) ENGINE=InnoDB AUTO_INCREMENT=21020013 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -86,18 +84,7 @@ CREATE TABLE `bacsi` (
 
 LOCK TABLES `bacsi` WRITE;
 /*!40000 ALTER TABLE `bacsi` DISABLE KEYS */;
-INSERT INTO `bacsi` VALUES (21020001,'Nguyễn Tiến','Đạt', 'Nam', 'Trưởng Khoa Da Liễu', 'Da Liễu', '03254621851','1888-12-09','ngtien@gmail.com','Bình Thạnh, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec Nha Trang'),
-							(21020002,'Hoàng Thi','Xuân', 'Nữ', 'Phó Khoa Da Liễu', 'Da Liễu', '03254621852','1896-11-05','htxuan@gmail.com','Gò vấp, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Hạnh Phúc'),
-                            (21020003,'Huỳnh Tiến','Lư', 'Nam', 'Chủ tịch Hội đồng Khoa', 'Da Liễu', '06654621456','1988-05-09','huynhtien@gmail.com', 'Bình Thạnh, Tp HCM','Thạc sĩ- Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
-							(21020004,'Nguyễn Sương','Ngoa', 'Nữ', 'Phó trưởng cấp cứu', 'Nội tổng quát', '09954621523','1991-08-29', 'suongNgoa@gmail.com','Bình Thạnh, Tp HCM','Bác sĩ - Bác sĩ' ,'Phó Trưởng Khoa Cấp Cứu 24H, Bệnh viện Quốc tế Hạnh Phúc'),
-                            (21020005,'Mai Tiến','Hợp', 'Nữ', 'Trưởng Khoa', 'Nội tổng quát', '06654621456','1885-12-09','mtienHop@gmail.com', 'Quận 5, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
-                            (21020006,'Xuân Hữu','Nghị', 'Nam', 'Phó Khoa hô hấp', 'Hô Hấp', '06754624789','1878-08-29','huunghi@gmail.com', 'Quận 7, Tp HCM','Thạc sĩ - Bác sĩ' ,'Bệnh viện Mỹ Đức'),
-                            (21020007,'Hồng Bắc','In', 'Nam', 'Trưởng Khoa hô hấp', 'Hô Hấp', '06754624895','1877-11-06','hongbin@gmail.com', 'Quận 8, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Hạnh Phúc'),
-                            (21020008,'Đào Văn','Xiêu', 'Nam', 'Trưởng Khoa thần kinh', 'Thần Kinh', '06754624123','1879-09-19','hongbin@gmail.com', 'Quận 10, Tp HCM','Giáo sư' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
-                            (21020009,'Nguyễn Ngọc','Hồng', 'Nữ', 'Phó Chủ tịch Hội đồng Khoa', 'Chẩn đoán hình ảnh', '08924624123','1800-03-29','honghong@gmail.com', 'Quận Bình Chiểu, Tp Thủ Đức','Bác sĩ' ,'Bệnh viện Quốc tế Hạnh Phúc'),
-                            (21020010,'Nguyễn Hoa','Nữ', 'Nữ', 'Trưởng khoa Chẩn đoán hình ảnh', 'Chẩn đoán hình ảnh', '09924612343','1967-05-15','hoanu0@gmail.com', 'Quận 4, Tp HCM','Bác sĩ' ,'Bệnh viện Quốc tế Hạnh Phúc'),
-                            (21020011,'Mai Tiến','Hợp', 'Nữ', 'Trưởng Khoa Tai-Mũi-Họng', 'Tai-Mũi-Họng', '06654621456','1885-05-28','mtienHop85@gmail.com', 'Quận 5, Tp HCM','Tiến sĩ - Bác sĩ' ,'Bệnh viện Đa khoa Quốc tế Vinmec'),
-                            (21020012,'Xuân Hữu','Nghị', 'Nam', 'Phó Khoa Tai-Mũi-Họng', 'Tai-Mũi-Họng', '06754624789','1882-08-20','huunghi82@gmail.com', 'Quận 7, Tp HCM','Thạc sĩ - Bác sĩ' ,'Bệnh viện Mỹ Đức');
+INSERT INTO `bacsi` VALUES (21020001,'Nguyễn Tiến','Đạt','Nam','Trưởng Khoa Da Liễu','Da Liễu','03254621851','1888-12-09','ngtien@gmail.com','Bình Thạnh, Tp HCM','Tiến sĩ - Bác sĩ','Bệnh viện Đa khoa Quốc tế Vinmec Nha Trang',3),(21020002,'Xuân Hữu','Nghị','Nam','Phó Khoa hô hấp','Hô Hấp','06754624789','1878-08-29','huunghi@gmail.com','Quận 7, Tp HCM','Thạc sĩ - Bác sĩ','Bệnh viện Mỹ Đức',4),(21020003,'Đào Văn','Xiêu','Nam','Trưởng Khoa thần kinh','Thần Kinh','06754624123','1879-09-19','hongbin@gmail.com','Quận 10, Tp HCM','Giáo sư','Bệnh viện Đa khoa Quốc tế Vinmec',5),(21020004,'Nguyễn Hoa','Nữ','Nữ','Trưởng khoa Chẩn đoán hình ảnh','Chẩn đoán hình ảnh','09924612343','1967-05-15','hoanu0@gmail.com','Quận 4, Tp HCM','Bác sĩ','Bệnh viện Quốc tế Hạnh Phúc',6),(21020005,'Mai Tiến','Hợp','Nữ','Trưởng Khoa Tai-Mũi-Họng','Tai-Mũi-Họng','06654621456','1885-05-28','mtienHop85@gmail.com','Quận 5, Tp HCM','Tiến sĩ - Bác sĩ','Bệnh viện Đa khoa Quốc tế Vinmec',7);
 /*!40000 ALTER TABLE `bacsi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,10 +97,10 @@ DROP TABLE IF EXISTS `baocao`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `baocao` (
   `idBC` int NOT NULL AUTO_INCREMENT,
-  `tenBC` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenBC` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `idQL` int NOT NULL,
   `ngaylapBC` datetime NOT NULL,
-  `noidung` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `noidung` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`idBC`),
   KEY `fk_baocao_admin_idx` (`idQL`),
   CONSTRAINT `fk_baocao_admin` FOREIGN KEY (`idQL`) REFERENCES `admin` (`id`)
@@ -138,17 +125,19 @@ DROP TABLE IF EXISTS `benhnhan`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `benhnhan` (
   `idBN` int NOT NULL AUTO_INCREMENT,
-  `hoBN` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `tenBN` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `gioitinh` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sodienthoai` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `hoBN` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `tenBN` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gioitinh` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sodienthoai` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `namsinh` date DEFAULT NULL,
-  `email` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `diachi` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `benhan` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `diachi` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `benhan` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
   PRIMARY KEY (`idBN`),
-  CONSTRAINT `fk_benhnhan_taikhoan` FOREIGN KEY (`idBN`) REFERENCES `taikhoan` (`idTK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  KEY `fk_benhnhan_taikhoan` (`user_id`),
+  CONSTRAINT `fk_benhnhan_taikhoan` FOREIGN KEY (`user_id`) REFERENCES `taikhoan` (`idTK`)
+) ENGINE=InnoDB AUTO_INCREMENT=21040018 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,23 +146,7 @@ CREATE TABLE `benhnhan` (
 
 LOCK TABLES `benhnhan` WRITE;
 /*!40000 ALTER TABLE `benhnhan` DISABLE KEYS */;
-INSERT INTO `benhnhan` VALUES (21040001,'Nguyễn Xuân','Tiến', 'Nam', '03254621851','1888-05-15','ngtien@gmail.com','Quận Bình Chiểu, Tp Thủ Đức' ,'Sốt - ho khan'),
-							(21040002,'Hoàng Nguyễn Thi','Lư', 'Nữ', '03254621852','1896-05-15','htLu@gmail.com','Gò vấp, Tp HCM' ,'Viêm mũi dị ứng'),
-                            (21040003,'Huỳnh Tiến','Nam', 'Nam', '06654621456','1988-05-15','huynhtiennam@gmail.com', 'Bình Thạnh, Tp HCM' ,'Nổi mề đay'),
-							(21040004,'Hoàng Sương','Hoa', 'Nữ', '09954621523','1991-02-11', 'hsuonghoa@gmail.com','Quận 8, Tp HCM' ,'Viêm da cơ địa'),
-                            (21040005,'Mai Thi','Sương', 'Nữ','06654621456','1885-02-20','msuong@gmail.com', 'Quận 10, Tp HCM','Viêm xoang'),
-                            (21040006,'Hoàng Hữu','Phúc', 'Nam','06754624789','1878-03-14','huuphuc@gmail.com', 'Quận 7, Tp HCM' ,'Loãng cơ xương'),
-                            (21040007,'Đào Bắc','Xiêu', 'Nam', '06754624895','1877-02-11','xieubn@gmail.com', 'Bình quới, Tp Cần Thơ' ,'Chứng đỏ mặt'),
-                            (21040008,'Đào Văn','Hoàng', 'Nam', '06754624123','1879-12-11','namdao@gmail.com', 'Quận 5, Tp HCM','Sốt - ho khan'),
-                            (21040009,'Nguyễn Nữ','Quỳnh', 'Nữ', '08924624123','1800-01-11','hongquynh@gmail.com', 'Bình Thạnh, Tp HCM' ,'Chứng trầm cảm'),
-                            (21040010,'Nguyễn Hoa',' Ngọc', 'Nữ', '09924612343','1967-03-20','hoanu0@gmail.com', 'Quận 4, Tp HCM','Viêm da cơ địa'),
-                            (21040011,'Mai Thị','Hoa', 'Nữ', '06754624789','1878-08-29','hoanu@gmail.com', 'Quận 7, Tp HCM','Viêm da cơ địa'),
-                            (21040012,'Hồng Bắc','Hạo', 'Nam', '06754624895','1877-11-06','bachao@gmail.com', 'Quận 8, Tp HCM','Loãng cơ xương'),
-                            (21040013,'Hoàng Thị','Lụa', 'Nữ', '06754624123','1879-09-19','htLn@gmail.com', 'Quận 10, Tp HCM','Nổi mề đay'),
-                            (21040014,'Nguyễn Ngọc','Minh', 'Nữ', '08924624123','1800-03-29','ngocminh@gmail.com', 'Quận Bình Chiểu, Tp Thủ Đức' ,'Sốt - ho khan'),
-                            (21040015,'Hồ Văn','Việt', 'Nam', '09924612343','1967-05-15','vietviet0@gmail.com', 'Quận 4, Tp HCM','Sốt - ho khan'),
-                            (21040016,'Hồ Ngọc','Xuân', 'Nữ', '06654621456','1885-05-28','xuan85@gmail.com', 'Quận 5, Tp HCM' ,'Viêm da cơ địa'),
-                            (21040017,'Đỗ','Nghị', 'Nam', '06754624789','1882-08-20','ghi82@gmail.com', 'Quận 7, Tp HCM','Loãng cơ xương');
+INSERT INTO `benhnhan` VALUES (21040001,'Nguyễn Xuân','Tiến','Nam','03254621851','1888-05-15','ngtien@gmail.com','Quận Bình Chiểu, Tp Thủ Đức','Sốt - ho khan',11),(21040002,'Hoàng Nguyễn Thi','Lư','Nữ','03254621852','1896-05-15','htLu@gmail.com','Gò vấp, Tp HCM','Viêm mũi dị ứng',12),(21040003,'Huỳnh Tiến','Nam','Nam','06654621456','1988-05-15','huynhtiennam@gmail.com','Bình Thạnh, Tp HCM','Nổi mề đay',13);
 /*!40000 ALTER TABLE `benhnhan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,7 +176,7 @@ CREATE TABLE `chitietdonthuoc` (
 
 LOCK TABLES `chitietdonthuoc` WRITE;
 /*!40000 ALTER TABLE `chitietdonthuoc` DISABLE KEYS */;
-INSERT INTO `chitietdonthuoc` VALUES (1,'10','2', '30000','60000');
+INSERT INTO `chitietdonthuoc` VALUES (1,10,2,30000,60000);
 /*!40000 ALTER TABLE `chitietdonthuoc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -216,8 +189,8 @@ DROP TABLE IF EXISTS `danhmucthuoc`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `danhmucthuoc` (
   `idDM` int NOT NULL AUTO_INCREMENT,
-  `tenDM` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mota` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tenDM` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mota` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`idDM`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -243,13 +216,13 @@ CREATE TABLE `donthuoc` (
   `idDT` int NOT NULL AUTO_INCREMENT,
   `idBS` int NOT NULL,
   `idBN` int NOT NULL,
-  `ghichu` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ghichu` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`idDT`),
   KEY `fk_donthuoc_benhnhan_idx` (`idBN`),
   KEY `fk_donthuoc_bacsi_idx` (`idBS`),
   CONSTRAINT `fk_donthuoc_bacsi` FOREIGN KEY (`idBS`) REFERENCES `bacsi` (`idBS`),
   CONSTRAINT `fk_donthuoc_benhnhan` FOREIGN KEY (`idBN`) REFERENCES `benhnhan` (`idBN`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -258,7 +231,7 @@ CREATE TABLE `donthuoc` (
 
 LOCK TABLES `donthuoc` WRITE;
 /*!40000 ALTER TABLE `donthuoc` DISABLE KEYS */;
-INSERT INTO `donthuoc` VALUES (1,'21020011','21040001', '');
+INSERT INTO `donthuoc` VALUES (1,21020011,21040001,'');
 /*!40000 ALTER TABLE `donthuoc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -273,14 +246,14 @@ CREATE TABLE `hoadon` (
   `idHD` int NOT NULL AUTO_INCREMENT,
   `idnguoiTT` int NOT NULL,
   `idnhanvienTT` int NOT NULL,
-  `hinhthucTT` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hinhthucTT` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tongTT` decimal(10,0) NOT NULL,
   PRIMARY KEY (`idHD`),
   KEY `fk_hoadon_benhnhan_idx` (`idnguoiTT`),
   KEY `fk_hoadon_yta_idx` (`idnhanvienTT`),
   CONSTRAINT `fk_hoadon_benhnhan` FOREIGN KEY (`idnguoiTT`) REFERENCES `benhnhan` (`idBN`),
   CONSTRAINT `fk_hoadon_yta` FOREIGN KEY (`idnhanvienTT`) REFERENCES `yta` (`idYT`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -289,32 +262,8 @@ CREATE TABLE `hoadon` (
 
 LOCK TABLES `hoadon` WRITE;
 /*!40000 ALTER TABLE `hoadon` DISABLE KEYS */;
-INSERT INTO `hoadon` VALUES (1,'21040001','4','Trực tiếp', '200000');
+INSERT INTO `hoadon` VALUES (1,21040001,4,'Trực tiếp',200000);
 /*!40000 ALTER TABLE `hoadon` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `loaitaikhoan`
---
-
-DROP TABLE IF EXISTS `loaitaikhoan`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `loaitaikhoan` (
-  `idLoaiTK` int NOT NULL AUTO_INCREMENT,
-  `tenloaiTK` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`idLoaiTK`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `loaitaikhoan`
---
-
-LOCK TABLES `loaitaikhoan` WRITE;
-/*!40000 ALTER TABLE `loaitaikhoan` DISABLE KEYS */;
-INSERT INTO `loaitaikhoan` VALUES (2101,'Admin'),(2102,'Bác Sĩ'),(2103,'Y Tá'),(2104,'Bệnh Nhân');
-/*!40000 ALTER TABLE `loaitaikhoan` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -326,7 +275,7 @@ DROP TABLE IF EXISTS `nhacungcap`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `nhacungcap` (
   `idNCC` int NOT NULL AUTO_INCREMENT,
-  `tenNCC` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenNCC` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`idNCC`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -353,11 +302,11 @@ CREATE TABLE `phieukhambenh` (
   `idBN` int NOT NULL,
   `idBS` int NOT NULL,
   `ngaykham` datetime NOT NULL,
-  `xacnhan` boolean,
+  `xacnhan` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idphieuKB`),
   CONSTRAINT `fk_phieukb_basi` FOREIGN KEY (`idphieuKB`) REFERENCES `bacsi` (`idBS`),
   CONSTRAINT `fk_phieukb_benhnhan` FOREIGN KEY (`idphieuKB`) REFERENCES `benhnhan` (`idBN`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -366,7 +315,7 @@ CREATE TABLE `phieukhambenh` (
 
 LOCK TABLES `phieukhambenh` WRITE;
 /*!40000 ALTER TABLE `phieukhambenh` DISABLE KEYS */;
-INSERT INTO `phieukhambenh` VALUES(1,'21040001', '21020011', '2021/10/1','TRUE');
+INSERT INTO `phieukhambenh` VALUES (1,21040001,21020011,'2021-10-01 00:00:00',0);
 /*!40000 ALTER TABLE `phieukhambenh` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -378,14 +327,12 @@ DROP TABLE IF EXISTS `taikhoan`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `taikhoan` (
-  `idTK` int NOT NULL,
-  `username` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `avatar` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `idLoaiTK` int NOT NULL,
-  PRIMARY KEY (`idTK`),
-  KEY `fkTaiKhoan_LoaiTK_idx` (`idLoaiTK`),
-  CONSTRAINT `fkTaiKhoan_LoaiTK` FOREIGN KEY (`idLoaiTK`) REFERENCES `loaitaikhoan` (`idLoaiTK`)
+  `idTK` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `avatar` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_role` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`idTK`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -395,7 +342,7 @@ CREATE TABLE `taikhoan` (
 
 LOCK TABLES `taikhoan` WRITE;
 /*!40000 ALTER TABLE `taikhoan` DISABLE KEYS */;
-INSERT INTO `taikhoan` VALUES(21010001,'lehao01', '21010001', NULL,'2101'), (21010002, 'nguyenxun02', '21010002', NULL,'2101'), (21020001, 'nguyendat01', '21020001', NULL,'2102'), (21020002, 'hoangxuan02', '21020002', NULL,'2102'), (21040001,'benhnhan1', '123', NULL, '2104');
+INSERT INTO `taikhoan` VALUES (1,'lehao01','11',NULL,'ROLE_ADMIN'),(2,'nguyenxun02','11',NULL,'ROLE_ADMIN'),(3,'nguyendat01','11',NULL,'ROLE_DOCTOR'),(4,'hoangxuan02','11',NULL,'ROLE_DOCTOR'),(5,'bs3','11',NULL,'ROLE_DOCTOR'),(6,'bs4','11',NULL,'ROLE_DOCTOR'),(7,'bs5','11',NULL,'ROLE_DOCTOR'),(8,'yt1','11',NULL,'ROLE_NURSE'),(9,'yt2','11',NULL,'ROLE_NURSE'),(10,'yt3','11',NULL,'ROLE_NURSE'),(11,'benhnhan1','11',NULL,'ROLE_USER'),(12,'bn2','11',NULL,'ROLE_USER'),(13,'bn3','11',NULL,'ROLE_USER');
 /*!40000 ALTER TABLE `taikhoan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -408,11 +355,11 @@ DROP TABLE IF EXISTS `thuoc`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `thuoc` (
   `idthuoc` int NOT NULL AUTO_INCREMENT,
-  `tenthuoc` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenthuoc` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `soluong` decimal(10,0) NOT NULL,
   `hansudung` date NOT NULL,
   `giaban` decimal(10,0) NOT NULL,
-  `mota` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mota` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `idDMT` int NOT NULL,
   `idNCC` int NOT NULL,
   PRIMARY KEY (`idthuoc`),
@@ -442,19 +389,21 @@ DROP TABLE IF EXISTS `yta`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `yta` (
   `idYT` int NOT NULL AUTO_INCREMENT,
-  `ho` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ten` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gioitinh` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sodienthoai` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ho` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ten` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gioitinh` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sodienthoai` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `namsinh` date DEFAULT NULL,
-  `email` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `diachi` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bangcap` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chucvu` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kinhnghiem` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bangcap` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chucvu` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kinhnghiem` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` int DEFAULT NULL,
   PRIMARY KEY (`idYT`),
-  CONSTRAINT `fk_yta_taikhoan` FOREIGN KEY (`idYT`) REFERENCES `taikhoan` (`idTK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `fk_yta_taikhoan` (`user_id`),
+  CONSTRAINT `fk_yta_taikhoan` FOREIGN KEY (`user_id`) REFERENCES `taikhoan` (`idTK`)
+) ENGINE=InnoDB AUTO_INCREMENT=21030011 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -463,17 +412,7 @@ CREATE TABLE `yta` (
 
 LOCK TABLES `yta` WRITE;
 /*!40000 ALTER TABLE `yta` DISABLE KEYS */;
-INSERT INTO `yta` VALUES (21030001,'Nguyễn Huỳnh Xuân','Hao', 'Nam', '03254621851','1984-08-09','nhuynhHao@gmail.com','Quận Bình Chiểu, Tp Thủ Đức','Điều dưỡng viên' ,'Điều dưỡng', '10 năm'),
-							(21030002,'Hoàng Nguyễn Thi','Lư', 'Nữ', '03254621852','1896-11-19','htLuLu@gmail.com','Gò vấp, Tp HCM','Điều dưỡng viên' ,'Điều dưỡng', '8 năm'),
-                            (21030003,'Huỳnh Mai','Sương', 'Nữ', '06654621456','1988-08-11','huynhtiennam@gmail.com', 'Bình Thạnh, Tp HCM','Điều dưỡng viên' ,'Điều dưỡng', '8năm'),
-							(21030004,'Hoàng Hữu','Học', 'Nữ', '09954621523','1991-07-29', 'hoangnua@gmail.com','Quận 8, Tp HCM','Điều dưỡng viên' ,'Thu Ngân', '5 năm'),
-                            (21030005,'Mai Thi','Sếu', 'Nữ','06654621456','1885-08-29','seumai@gmail.com', 'Quận 10, Tp HCM','Điều dưỡng viên' ,'Điều dưỡng', '9 năm'),
-                            (21030006,'Hoàng Hạnh','Phúc', 'Nam','06754624789','1952-07-30','hanhphuc@gmail.com', 'Quận 7, Tp HCM','Điều dưỡng viên' ,'Điều dưỡng', '13 năm'),
-                            (21030007,'Phan Thị','Tuyết', 'Nữ', '06754624895','1996-09-29','tuyettuyet@gmail.com', 'Bình quới, Tp Cần Thơ','Điều dưỡng viên' ,'Thu Ngân', '3 năm'),
-                            (21030008,'Đào Diễm','Kiều', 'Nữ', '06754624123','1978-11-22','daokieu@gmail.com', 'Quận 5, Tp HCM','Điều dưỡng viên' ,'Điều dưỡng', '11 năm'),
-                            (21030009,'Nguyễn Ngọc Quỳnh','Quỳnh', 'Nữ', '08924624123','1991-07-21','nquynh@gmail.com', 'Bình Thạnh, Tp HCM','Điều dưỡng viên' ,'Thu Ngân', '2 năm'),
-                            (21030010,'Nguyễn Ngọc',' Ngọc', 'Nữ', '09924612343','1990-09-15','ngocngoc@gmail.com', 'Quận 4, Tp HCM','Điều dưỡng viên' ,'Điều dưỡng', '8 năm');
-
+INSERT INTO `yta` VALUES (21030001,'Nguyễn Huỳnh Xuân','Hao','Nam','03254621851','1984-08-09','nhuynhHao@gmail.com','Quận Bình Chiểu, Tp Thủ Đức','Điều dưỡng viên','Điều dưỡng','10 năm',8),(21030002,'Hoàng Hữu','Học','Nữ','09954621523','1991-07-29','hoangnua@gmail.com','Quận 8, Tp HCM','Điều dưỡng viên','Thu Ngân','5 năm',9),(21030003,'Mai Thi','Sếu','Nữ','06654621456','1885-08-29','seumai@gmail.com','Quận 10, Tp HCM','Điều dưỡng viên','Điều dưỡng','9 năm',10);
 /*!40000 ALTER TABLE `yta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -486,4 +425,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-26  9:52:35
+-- Dump completed on 2021-11-04  8:03:37
