@@ -7,8 +7,6 @@ package com.qlpmtu.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,10 +14,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.springframework.web.multipart.MultipartFile;
@@ -31,37 +30,54 @@ import org.springframework.web.multipart.MultipartFile;
 @Entity
 @Table (name="taikhoan")
 public class User implements Serializable{
-    private static String ADMIN = "ROLE_ADMIN";
-    private static String DOCTOR = "ROLE_DOCTOR";
-    private static String YTA = "ROLE_YTA";
-    private static String USER = "ROLE_USER";
+    public static final String ADMIN = "ROLE_ADMIN";
+    public static final String DOCTOR = "ROLE_DOCTOR";
+    public static final String YTA = "ROLE_YTA";
+    public static final String USER = "ROLE_USER";
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTK;
     
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
+    @NotEmpty(message="{user.empty.emptyErr}")
+    @Size(min = 1, max = 25, message="{user.username.lenErr}")
     private String username;
     
     @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
+    @NotEmpty(message="{user.empty.emptyErr}")
+    @Size(min = 1, max = 45, message="{user.password.lenErr}")
     @Column(name = "password")
-    @JsonIgnore
     private String password;
     
     @Transient
-    @JsonIgnore
+    @NotEmpty(message="{user.empty.emptyErr}")
     private String confirmPassword;
     
-    private String avatar;
-    @Column (name="user-role")
+    @Column (name="user_role")
     private String userRole;
     
+    private String avatar;
     @Transient
     private MultipartFile file;
+    
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "address_id", referencedColumnName = "id")
+//    private BenhNhan address; // biến address này sẽ trùng  với giá trị  mappedBy trong Class User 
+//    
+    public User() {
+    }
+
+    public User(Integer id) {
+        this.idTK = id;
+    }
+
+    public User(Integer id, String username, String password, String userRole) {
+        this.idTK = id;
+        this.username = username;
+        this.password = password;
+        this.userRole = userRole;
+    }
 
     /**
      * @return the idTK

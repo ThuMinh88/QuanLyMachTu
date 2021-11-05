@@ -38,7 +38,7 @@
                         <span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
                     </div>
                     <div class="sub-w3l">
-                        <h6><a href="<c:url value="/register"/>">Đăng kí tài khoản</a></h6>
+                        <h6><a href="<c:url value="/register"/>" class="text-gray-500"">Đăng kí tài khoản</a></h6>
                         <div class="right-w3l form-group">
                             <input type="submit" value="Đăng Nhập">
                         </div>

@@ -34,10 +34,10 @@ public class BenhNhan{
     private int idBenhNhan;
     
     @Column(name = "hoBN")
-    private String hoBenhNhan;
+    private String firstname;
     
     @Column(name = "tenBN")
-    private String tenBenhNhan;
+    private String lastname;
     
     @Column(name = "gioitinh")
     private String gioiTinh;
@@ -60,6 +60,15 @@ public class BenhNhan{
     @Column(name = "benhan")
     private String benhAn;
 
+    public BenhNhan(){
+        
+    }
+    public BenhNhan(Integer id){
+        this.idBenhNhan = id;
+    }
+    
+   
+    
     /**
      * @return the idBenhNhan
      */
@@ -74,34 +83,7 @@ public class BenhNhan{
         this.idBenhNhan = idBenhNhan;
     }
 
-    /**
-     * @return the hoBenhNhan
-     */
-    public String getHoBenhNhan() {
-        return hoBenhNhan;
-    }
-
-    /**
-     * @param hoBenhNhan the hoBenhNhan to set
-     */
-    public void setHoBenhNhan(String hoBenhNhan) {
-        this.hoBenhNhan = hoBenhNhan;
-    }
-
-    /**
-     * @return the tenBenhNhan
-     */
-    public String getTenBenhNhan() {
-        return tenBenhNhan;
-    }
-
-    /**
-     * @param tenBenhNhan the tenBenhNhan to set
-     */
-    public void setTenBenhNhan(String tenBenhNhan) {
-        this.tenBenhNhan = tenBenhNhan;
-    }
-
+    
     /**
      * @return the gioiTinh
      */
@@ -226,6 +208,34 @@ public class BenhNhan{
      */
     public void setUserID(User userID) {
         this.userID = userID;
+    }
+
+    /**
+     * @return the firstname
+     */
+    public String getFirstname() {
+        return firstname;
+    }
+
+    /**
+     * @param firstname the firstname to set
+     */
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    /**
+     * @return the lastname
+     */
+    public String getLastname() {
+        return lastname;
+    }
+
+    /**
+     * @param lastname the lastname to set
+     */
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
 }

@@ -73,5 +73,13 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/jsp/admin-medicine.jsp"/>
     </definition>
     
+<!--    Trang bác sĩ
+    <definition name="doctor-index" extends="baseLayout">
+        <put-attribute name="title" value="OTC Doctor - Dashboard" />
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/{ở đây gắn 
+                                    cái jsp sidebar-doctor khi cắt cái side ra }.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/doctor-index.jsp"/>
+    </definition>-->
+    
 </tiles-definitions>
 

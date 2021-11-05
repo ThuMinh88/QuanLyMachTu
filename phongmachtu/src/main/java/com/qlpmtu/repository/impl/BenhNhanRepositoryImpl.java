@@ -9,6 +9,7 @@ import com.qlpmtu.pojos.BenhNhan;
 import com.qlpmtu.repository.BenhNhanRepository;
 import java.util.List;
 import javax.persistence.Query;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
@@ -32,4 +33,34 @@ public class BenhNhanRepositoryImpl implements BenhNhanRepository {
         Query q = s.createQuery("From BenhNhan");
         return q.getResultList();
     }
+
+    @Override
+    public boolean addName(BenhNhan bn) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        try {
+            session.save(bn);
+            
+            return true;
+        } catch (HibernateException ex) {
+            System.err.println(ex.getMessage());
+        }
+        
+        return false;
+    }
+
+    @Override
+    public BenhNhan getBenhNhanById(int i) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        
+        return session.get(BenhNhan.class, i);
+    }
+
+    @Override
+    public long countBenhNhan() {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        Query q = session.createQuery("SELECT Count(*) From BenhNhan");
+        
+        return Long.parseLong(q.getSingleResult().toString());
+    }
+
 }

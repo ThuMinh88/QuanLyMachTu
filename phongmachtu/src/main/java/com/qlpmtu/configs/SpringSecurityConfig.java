@@ -7,6 +7,9 @@ package com.qlpmtu.configs;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.qlpmtu.configs.handlers.LoginSuccessHandler;
+import com.qlpmtu.configs.handlers.LogoutHandler;
+import com.qlpmtu.configs.handlers.MyAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,6 +20,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
@@ -34,12 +39,31 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserDetailsService userDetailsService;
+     @Autowired
+    private AuthenticationSuccessHandler loginSuccessHandler;
+    @Autowired
+    private LogoutSuccessHandler logoutHandler;
+    @Autowired
+    private MyAccessDeniedHandler accessDenied;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    } 
+    @Bean
+    public AuthenticationSuccessHandler loginSuccessHandler() {
+        return new LoginSuccessHandler();
     }
-
+@Bean
+    public MyAccessDeniedHandler accessDenied() {
+        return new MyAccessDeniedHandler();
+    }
+    @Bean
+    public LogoutSuccessHandler logoutHandler() {
+        return new LogoutHandler();
+    }
+    
+    
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService)
@@ -53,16 +77,16 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordParameter("password");
         
         http.formLogin().defaultSuccessUrl("/appointment").failureUrl("/login?error");
-//        http.formLogin().successHandler(this.loginSuccessHandler);
+        http.formLogin().successHandler(this.loginSuccessHandler);
 //        
 ////        http.logout().logoutSuccessUrl("/login");
-//        http.logout().logoutSuccessHandler(this.logoutHandler);
+        http.logout().logoutSuccessHandler(this.logoutHandler);
 //        
-//        http.exceptionHandling().accessDeniedPage("/login?accessDenied");
+        http.exceptionHandling().accessDeniedPage("/login?accessDenied");
 ////        http.exceptionHandling().accessDeniedHandler(accessDenied);
 ////        http.exceptionHandling().
-//        http.authorizeRequests().antMatchers("/").permitAll()
-//                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/").permitAll()
+                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')");
 //        
         http.csrf().disable();
     }
