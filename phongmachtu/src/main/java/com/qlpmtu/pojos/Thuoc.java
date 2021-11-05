@@ -18,6 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
 
 /**
  *
@@ -38,6 +39,8 @@ public class Thuoc implements Serializable{
     @Column(name = "hansudung")
     @Temporal(TemporalType.DATE)
     private Date hanSuDung;
+    
+    @Min(value = 1000, message="{thuoc.giaban.minErr}")
     @Column(name = "giaban")
     private BigDecimal giaBan;
     @Column(name = "mota")

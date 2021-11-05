@@ -9,7 +9,7 @@
   
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" class="top d-flex align-items-center">
     <div class="container">
       <h1>Chăm sóc sức khỏe cùng OTC</h1>
       <h2>Hãy cùng chúng tôi để được hỗ trợ sức khỏe tốt nhất!</h2>

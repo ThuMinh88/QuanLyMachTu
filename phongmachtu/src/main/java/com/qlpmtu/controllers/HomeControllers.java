@@ -23,13 +23,12 @@ public class HomeControllers {
          return "index";
      }
      
-     
-     
-     @GetMapping("/register")
-     public String register(Model model){
-         return "register";
+     @GetMapping("/appointment")
+     public String appointment(Model model){
+         return "appointment";
      }
      
+
      @GetMapping("/admin-index")
      public String indexAD(Model model){
          return "admin-index";

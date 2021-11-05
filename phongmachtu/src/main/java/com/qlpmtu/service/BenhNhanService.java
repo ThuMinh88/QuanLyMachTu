@@ -7,11 +7,14 @@ package com.qlpmtu.service;
 
 import com.qlpmtu.pojos.BenhNhan;
 import java.util.List;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
  *
  * @author ACER
  */
 public interface BenhNhanService {
+    BenhNhan getBenhNhanById(int i);
     List<BenhNhan> getBenhNhans();
+    boolean addName(BenhNhan bn);
 }

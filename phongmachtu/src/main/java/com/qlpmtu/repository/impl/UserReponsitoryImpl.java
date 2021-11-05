@@ -13,6 +13,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,23 @@ public class UserReponsitoryImpl implements UserReponsitory {
     private LocalSessionFactoryBean sessionFactory;
 
     @Override
+    public User getUserById(int id) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        
+        return session.get(User.class, id);
+    }
+    
+    @Override
     public boolean addUser(User user) {
+        Session session = this.sessionFactory.getObject().getCurrentSession();
+        try {
+            session.save(user);
+            
+            return true;
+        } catch (HibernateException ex) {
+            System.err.println(ex.getMessage());
+        }
+        
         return false;
     }
 

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author DAO
+ * @author ACER
  */
 public interface DanhMucThuocService {
     List<DanhMucThuoc> getDanhMucThuocs();

@@ -5,7 +5,9 @@
  */
 package com.qlpmtu.pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +15,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -22,77 +27,49 @@ import org.springframework.web.multipart.MultipartFile;
 @Entity
 @Table (name="taikhoan")
 public class User implements Serializable{
-    private static String ADMIN = "2101";
-    private static String DOCTOR = "2102";
-    private static String YTA = "2103";
-    private static String USER = "2104";
+    public static final String ADMIN = "ROLE_ADMIN";
+    public static final String DOCTOR = "ROLE_DOCTOR";
+    public static final String YTA = "ROLE_YTA";
+    public static final String USER = "ROLE_USER";
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTK;
+    
+    @Basic(optional = false)
+    @NotEmpty(message="{user.empty.emptyErr}")
+    @Size(min = 1, max = 25, message="{user.username.lenErr}")
     private String username;
+    
+    @Basic(optional = false)
+    @NotEmpty(message="{user.empty.emptyErr}")
+    @Size(min = 1, max = 45, message="{user.password.lenErr}")
+    @Column(name = "password")
     private String password;
-    private String avatar;
-    @Column(name="idLoaiTK")
-    private String userRole;
     
     @Transient
+    @NotEmpty(message="{user.empty.emptyErr}")
+    private String confirmPassword;
+    
+    @Column (name="user_role")
+    private String userRole;
+    
+    private String avatar;
+    @Transient
     private MultipartFile file;
-
-    /**
-     * @return the ADMIN
-     */
-    public static String getADMIN() {
-        return ADMIN;
+    
+    public User() {
     }
 
-    /**
-     * @param aADMIN the ADMIN to set
-     */
-    public static void setADMIN(String aADMIN) {
-        ADMIN = aADMIN;
+    public User(Integer id) {
+        this.idTK = id;
     }
 
-    /**
-     * @return the DOCTOR
-     */
-    public static String getDOCTOR() {
-        return DOCTOR;
-    }
-
-    /**
-     * @param aDOCTOR the DOCTOR to set
-     */
-    public static void setDOCTOR(String aDOCTOR) {
-        DOCTOR = aDOCTOR;
-    }
-
-    /**
-     * @return the YTA
-     */
-    public static String getYTA() {
-        return YTA;
-    }
-
-    /**
-     * @param aYTA the YTA to set
-     */
-    public static void setYTA(String aYTA) {
-        YTA = aYTA;
-    }
-
-    /**
-     * @return the USER
-     */
-    public static String getUSER() {
-        return USER;
-    }
-
-    /**
-     * @param aUSER the USER to set
-     */
-    public static void setUSER(String aUSER) {
-        USER = aUSER;
+    public User(Integer id, String username, String password, String userRole) {
+        this.idTK = id;
+        this.username = username;
+        this.password = password;
+        this.userRole = userRole;
     }
 
     /**
@@ -138,6 +115,20 @@ public class User implements Serializable{
     }
 
     /**
+     * @return the confirmPassword
+     */
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    /**
+     * @param confirmPassword the confirmPassword to set
+     */
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    /**
      * @return the avatar
      */
     public String getAvatar() {
@@ -179,5 +170,5 @@ public class User implements Serializable{
         this.file = file;
     }
 
-    
+   
 }
