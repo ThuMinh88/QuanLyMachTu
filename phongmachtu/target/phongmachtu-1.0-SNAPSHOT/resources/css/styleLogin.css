@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/*
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
+a {
+  color: #1977cc;
+}
+
+a:hover {
+  color: #3291e6;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+table{border-collapse:collapse;border-spacing:0;}
+
+.bg-login-image {
+  background: url("../img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+/*----------------------
+# Login section
+---------------------------------------------------------------*/
+
+#login h2{
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#login{
+  width: 100%;
+  height: 90vh;
+  background: url("/img/hero-bg.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -200px;
+}
+#login .container {
+  position: relative;
+}
+
+
+@media (min-width: 1024px) {
+  #login {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 992px) {
+  #login {
+    margin-bottom: 0;
+    height: 100vh;
+  }
+  #login .container {
+    padding-bottom: 63px;
+  }
+  #login h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #login h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  #login {
+    height: auto;
+  }
+}
+#login h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #2c4964;
+}
+
+
+.sub-main-w3 input[type="email"], .sub-main-w3 input[type="password"] {
+  outline: none;
+  font-size: .9em;
+  padding: 1em 3em 1em 1em;
+  border: none;
+  margin-bottom: 0.3em;
+  background: rgba(255, 255, 255, 0.85);
+  width: 82%;
+  color: #000;
+  border-radius: 30px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+.sub-main-w3 {
+  width: 50%;
+  margin: 10em 0 12em; 
+  padding: 30px;/* 
+  background-color: #1977cc; */
+}
+.sub-w3l h6 a {
+  font-size: .9em;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: right;
+  display: inherit;
+  margin-right: 6rem;
+}
+.sub-w3l {
+  margin-top: 1em;
+}
+.right-w3l {
+  margin-top: 2em;
+}
+
+.pom-agile {
+  position: relative;
+}
+
+input.pass {
+  margin-top: .7em;
+}
+span.icon1, span.icon2 {
+  color: #ea2858;
+  font-size: 1.1em;
+  position: absolute;
+  right: 6%;
+}
+span.icon1 {
+  top: 23%;
+}
+span.icon2 {
+  top: 34%;
+}
+.sub-main-w3 input[type="submit"] {
+  color: white;
+  background: #ea2858;
+  border: none;
+  padding: .7em 0;
+  outline: none;
+  width: 44%;
+  font-size: 1em;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  border-radius: 30px;
+}
+.sub-main-w3 input[type="submit"]:hover {
+  background: #fff;
+  color: black;
+transition:0.5s all;
+-webkit-transition:0.5s all;
+-o-transition:0.5s all;
+-moz-transition:0.5s all;
+-ms-transition:0.5s all;
+}
+
+@media (min-width: 400px) {
+  .sub-main-w3 {
+    width: 100%;
+  }
+  .sub-main-w3 > h6{
+      font-size: 0.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sub-main-w3 {
+    width: 40%;
+  }
+}
+
+.top{
+    margin-top: 10rem;
+}
