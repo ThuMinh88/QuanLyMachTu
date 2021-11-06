@@ -39,7 +39,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserDetailsService userDetailsService;
-     @Autowired
+    @Autowired
     private AuthenticationSuccessHandler loginSuccessHandler;
     @Autowired
     private LogoutSuccessHandler logoutHandler;
@@ -49,56 +49,59 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    } 
+    }
+
     @Bean
     public AuthenticationSuccessHandler loginSuccessHandler() {
         return new LoginSuccessHandler();
     }
-@Bean
+
+    @Bean
     public MyAccessDeniedHandler accessDenied() {
         return new MyAccessDeniedHandler();
     }
+
     @Bean
     public LogoutSuccessHandler logoutHandler() {
         return new LogoutHandler();
     }
-    
-    
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
-    
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin().loginPage("/login")
                 .usernameParameter("username")
                 .passwordParameter("password");
-        
+
         http.formLogin().defaultSuccessUrl("/appointment").failureUrl("/login?error");
         http.formLogin().successHandler(this.loginSuccessHandler);
 //        
-////        http.logout().logoutSuccessUrl("/login");
+        http.logout().logoutSuccessUrl("/login");
         http.logout().logoutSuccessHandler(this.logoutHandler);
 //        
         http.exceptionHandling().accessDeniedPage("/login?accessDenied");
-////        http.exceptionHandling().accessDeniedHandler(accessDenied);
-////        http.exceptionHandling().
+        http.exceptionHandling().accessDeniedHandler(accessDenied);
+//        http.exceptionHandling().
         http.authorizeRequests().antMatchers("/").permitAll()
-                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')");
+                .antMatchers("/admin/**").access("hasRole('ADMIN')")
+                .antMatchers("/**/doctoc-index").access("hasRole('DOCTOR')")
+                .antMatchers("/**/nurse-index").access("hasRole('NURSE')");
 //        
         http.csrf().disable();
     }
-    
 
     @Bean
-    public Cloudinary cloudinary(){
+    public Cloudinary cloudinary() {
         Cloudinary c = new Cloudinary(ObjectUtils.asMap(
                 "cloud_name", "minh-thu",
                 "api_key", "873584343834566",
-                "api_secret","NQFslJoRHx0qQ16n6eM3j0-WTSI",
-                "secure",true
+                "api_secret", "NQFslJoRHx0qQ16n6eM3j0-WTSI",
+                "secure", true
         ));
         return c;
     }

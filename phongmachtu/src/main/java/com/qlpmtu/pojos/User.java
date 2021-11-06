@@ -46,7 +46,7 @@ public class User implements Serializable{
     
     @Basic(optional = false)
     @NotEmpty(message="{user.empty.emptyErr}")
-    @Size(min = 1, max = 45, message="{user.password.lenErr}")
+//    @Size(min = 1, max = 45, message="{user.password.lenErr}")
     @Column(name = "password")
     private String password;
     

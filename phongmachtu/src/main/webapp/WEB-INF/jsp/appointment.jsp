@@ -3,7 +3,7 @@
     Created on : Nov 3, 2021, 10:39:30 AM
     Author     : ACER
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!-- ======= Appointment Section ======= -->
 <section id="appointment" class="appointment section-bg">
@@ -12,12 +12,11 @@
       <div class="section-title">
         <h2>Đăng kí khám bệnh</h2>
       </div>
-
-<<<<<<< Updated upstream
+        
+        
       <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
 =======
       <form action="" method="post" role="form">
->>>>>>> Stashed changes
         <div class="form-row">
           <div class="col-md-4 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Họ và tên đệm" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
@@ -59,7 +58,9 @@
         </div>
         <div class="text-center"><button type="submit">Make an Appointment</button></div>
       </form>
-
+      <c:if test="${benhnhan.currentUser != null}">
+            ${benhnhan.currentUser.firtName}
+        </c:if>
     </div>
   </section><!-- End Appointment Section -->
 

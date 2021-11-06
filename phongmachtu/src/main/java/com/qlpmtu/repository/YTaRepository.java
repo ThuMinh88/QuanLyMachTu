@@ -15,4 +15,6 @@ import java.util.List;
 public interface YTaRepository {
     List<YTa> getYTas(); 
     YTa getYTaById(int ytaID);
+    boolean addYTa(YTa yt);
+    boolean deleteYta(int ytaID);
 }

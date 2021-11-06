@@ -1,5 +1,6 @@
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\PhieuKhamBenh.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\BenhNhanRepository.java
+C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\UserPassValidator.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DonThuoc.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\BacSiRepository.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\HomeControllers.java
@@ -8,6 +9,7 @@ C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\pho
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\DanhMucThuocRepositoryImpl.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\BenhNhanService.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\DanhMucThuocServiceImpl.java
+C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\WebAppValidator.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\MyAccessDeniedHandler.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BenhNhanServiceImpl.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\UserReponsitoryImpl.java
@@ -36,6 +38,7 @@ C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\pho
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\TilesConfig.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\BacSiService.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\DanhMucThuocService.java
+C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\AdminControllers.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\YTaRepositoryImpl.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BacSiServiceImpl.java
 C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\BenhNhan.java

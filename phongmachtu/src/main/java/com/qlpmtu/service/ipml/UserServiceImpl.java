@@ -35,6 +35,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
+    
     @Autowired
     private Cloudinary cloudinary;
 

@@ -19,12 +19,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/admin")
 public class DoctorControllers {
-    @Autowired
-    private BacSiService bacSiService;
-    
-    @GetMapping("/admin-doctor")
-     public String doctorAD(Model model){
-         model.addAttribute("bacsi", this.bacSiService.getBacSis());
-         return "admin-doctor";
-     }
+   
 }

@@ -21,6 +21,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author ACER
  */
 @Repository
+@Transactional
 public class BenhNhanRepositoryImpl implements BenhNhanRepository {
 
     @Autowired
@@ -41,8 +42,9 @@ public class BenhNhanRepositoryImpl implements BenhNhanRepository {
             session.save(bn);
             
             return true;
-        } catch (HibernateException ex) {
-            System.err.println(ex.getMessage());
+        } catch (Exception ex) {
+            System.err.println("==ERROR==" + ex.getMessage());
+            ex.printStackTrace();
         }
         
         return false;

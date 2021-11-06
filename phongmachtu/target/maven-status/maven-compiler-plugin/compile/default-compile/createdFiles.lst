@@ -14,6 +14,7 @@ com\qlpmtu\pojos\Admin.class
 com\qlpmtu\pojos\Nhacungcap.class
 com\qlpmtu\controllers\DoctorControllers.class
 com\qlpmtu\service\ThuocService.class
+com\qlpmtu\controllers\AdminControllers.class
 com\qlpmtu\configs\HibernateConfig.class
 com\qlpmtu\repository\BenhNhanRepository.class
 com\qlpmtu\configs\DispatcherServletInitializer.class

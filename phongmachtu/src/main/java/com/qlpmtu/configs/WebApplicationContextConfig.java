@@ -70,7 +70,11 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 //    public Validator getValidator() {
 //        return validator();
 //    }
+<<<<<<< Updated upstream
 //
+=======
+
+>>>>>>> Stashed changes
 //    @Bean
 //    public WebAppValidator userValidator() {
 //        Set<Validator> validators = new HashSet<>();
@@ -80,6 +84,7 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 //        v.setSpringValidators(validators);
 //        return v;
 //    }
+<<<<<<< Updated upstream
 
     @Bean
     public LocalValidatorFactoryBean validator() {
@@ -88,6 +93,16 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 
         return v;
     }
+=======
+//
+//    @Bean
+//    public LocalValidatorFactoryBean validator() {
+//        LocalValidatorFactoryBean v = new LocalValidatorFactoryBean();
+//        v.setValidationMessageSource(messageSource());
+//
+//        return v;
+//    }
+>>>>>>> Stashed changes
 
     @Bean
     public MessageSource messageSource() {

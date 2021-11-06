@@ -1,4 +1,4 @@
-/*
+        /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -9,21 +9,32 @@ import com.qlpmtu.pojos.BenhNhan;
 import com.qlpmtu.pojos.User;
 import com.qlpmtu.service.BenhNhanService;
 import com.qlpmtu.service.UserService;
+<<<<<<< Updated upstream
 //import com.qlpmtu.valitator.WebAppValidator;
+=======
+>>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+<<<<<<< Updated upstream
 //import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.InitBinder;
+=======
+import org.springframework.web.bind.annotation.GetMapping;
+>>>>>>> Stashed changes
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
  * @author ACER
  */
 @Controller
+@Transactional
 public class UserController {
     @Autowired
     private UserService userDetailsService;
@@ -32,31 +43,41 @@ public class UserController {
 
 //    @Autowired
 //    private WebAppValidator userValidator;
+<<<<<<< Updated upstream
     
+=======
+//    
+>>>>>>> Stashed changes
 //    @InitBinder
 //    public void init(WebDataBinder binder) {
 //        binder.setValidator(userValidator);
 //    }
+<<<<<<< Updated upstream
     
     @GetMapping("/login")
+=======
+//    
+    @GetMapping(value = "/login")
+>>>>>>> Stashed changes
      public String login(){
          return "login";
      }
      
      
-      @GetMapping("/register")
+      @RequestMapping(value = "/register", method = RequestMethod.GET)
      public String registerView(Model model){
          model.addAttribute("taikhoan", new User());
          model.addAttribute("benhnhan",new BenhNhan());
          return "register";
      }
+     
      @PostMapping("/register")
-     public String register(Model model, @ModelAttribute(value = "taikhoan") User user) {
+     public String register(Model model, @ModelAttribute(value = "taikhoan") User user,@ModelAttribute (value = "benhnhan") BenhNhan bn) {
         if (user.getPassword().isEmpty() 
                 || !user.getPassword().equals(user.getConfirmPassword())) 
             model.addAttribute("errMsg", "Mật khẩu không khớp!!!");
         else {
-            if (this.userDetailsService.addUser(user) == true) {
+            if (this.userDetailsService.addUser(user) == true && this.benhNhanService.addName(bn) == true) {
                 return "redirect:/login";
             }
             
@@ -65,21 +86,29 @@ public class UserController {
         
         return "register";
     }
-     
 //     @PostMapping("/register")
-//     public String register(Model model, @ModelAttribute(value = "taikhoan") User user,
-//             @ModelAttribute(value="benhnhan") BenhNhan bn) {
-//        if (user.getPassword().isEmpty() 
-//                || !user.getPassword().equals(user.getConfirmPassword())) 
-//            model.addAttribute("errMsg", "Mật khẩu không khớp!!!");
-//        else {
-//            if (this.userDetailsService.addUser(user) == true || this.benhNhanService.addName(bn)) {
+//     public String registerBN(Model model,@ModelAttribute (value = "taikhoan") BenhNhan bn) {
+//            if ( this.benhNhanService.addName(bn) == true) {
 //                return "redirect:/login";
 //            }
-//            
-//            model.addAttribute("errMsg", "Đăng kí không thành công!");
+//            model.addAttribute("benhnha", "Đăng kí không thành công!");
+//        return "register";
+//    }
+     
+// @PostMapping("/register")
+//    public String register(Model model, 
+//            @ModelAttribute(value = "user") @Valid User user, @ModelAttribute (value = "taikhoan") BenhNhan bn,
+//            BindingResult result) {
+//        if (result.hasErrors()) {
+//            return "register";
 //        }
 //        
-//        return "register";
+//        if (this.userDetailsService.addUser(user) == false || this.benhNhanService.addName(bn) == false)  {
+//            model.addAttribute("errMsg", "Something wrong!!!");
+//            return "register";
+//        }
+//            
+//        
+//        return "redirect:/login";
 //    }
 }
