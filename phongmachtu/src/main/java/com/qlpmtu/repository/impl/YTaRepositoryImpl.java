@@ -21,12 +21,12 @@ import org.springframework.transaction.annotation.Transactional;
  * @author ACER
  */
 @Repository
-@Transactional
 public class YTaRepositoryImpl implements YTaRepository{
     @Autowired
     private LocalSessionFactoryBean sessionFactory;
 
     @Override
+    @Transactional
     public List<YTa> getYTas() {
         Session s = sessionFactory.getObject().getCurrentSession();
        Query q = s.createQuery("From YTa");

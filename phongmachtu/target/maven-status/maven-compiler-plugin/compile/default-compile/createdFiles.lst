@@ -11,7 +11,6 @@ com\qlpmtu\repository\DanhMucThuocRepository.class
 com\qlpmtu\repository\impl\ThuocRepositoryImpl.class
 com\qlpmtu\service\YTaService.class
 com\qlpmtu\pojos\Admin.class
-com\qlpmtu\pojos\Nhacungcap.class
 com\qlpmtu\controllers\DoctorControllers.class
 com\qlpmtu\service\ThuocService.class
 com\qlpmtu\controllers\AdminControllers.class
@@ -28,6 +27,8 @@ com\qlpmtu\service\UserService.class
 com\qlpmtu\controllers\PatientControllers.class
 com\qlpmtu\service\ipml\BacSiServiceImpl.class
 com\qlpmtu\configs\handlers\LogoutHandler.class
+com\qlpmtu\valitator\WebAppValidator.class
+com\qlpmtu\pojos\NhaCungCap.class
 com\qlpmtu\controllers\NurseControllers.class
 com\qlpmtu\repository\BacSiRepository.class
 com\qlpmtu\repository\impl\BacSiReponsitoryImpl.class
@@ -47,6 +48,7 @@ com\qlpmtu\configs\SecurityWebAppInitializer.class
 com\qlpmtu\pojos\Thuoc.class
 com\qlpmtu\repository\YTaRepository.class
 com\qlpmtu\pojos\User.class
+com\qlpmtu\valitator\UserPassValidator.class
 com\qlpmtu\controllers\UserController.class
 com\qlpmtu\pojos\PhieuKhamBenh.class
 com\qlpmtu\repository\impl\DanhMucThuocRepositoryImpl.class

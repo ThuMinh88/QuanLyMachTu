@@ -7,6 +7,8 @@ package com.qlpmtu.configs;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.qlpmtu.valitator.UserPassValidator;
+import com.qlpmtu.valitator.WebAppValidator;
 import java.util.HashSet;
 import java.util.Set;
 import org.springframework.context.MessageSource;
@@ -70,11 +72,7 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 //    public Validator getValidator() {
 //        return validator();
 //    }
-<<<<<<< Updated upstream
-//
-=======
 
->>>>>>> Stashed changes
 //    @Bean
 //    public WebAppValidator userValidator() {
 //        Set<Validator> validators = new HashSet<>();
@@ -84,16 +82,6 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 //        v.setSpringValidators(validators);
 //        return v;
 //    }
-<<<<<<< Updated upstream
-
-    @Bean
-    public LocalValidatorFactoryBean validator() {
-        LocalValidatorFactoryBean v = new LocalValidatorFactoryBean();
-        v.setValidationMessageSource(messageSource());
-
-        return v;
-    }
-=======
 //
 //    @Bean
 //    public LocalValidatorFactoryBean validator() {
@@ -102,7 +90,6 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 //
 //        return v;
 //    }
->>>>>>> Stashed changes
 
     @Bean
     public MessageSource messageSource() {

@@ -61,7 +61,7 @@ public class UserReponsitoryImpl implements UserReponsitory {
         Root root = query.from(User.class);
         query = query.select(root);
 
-        if (username.isEmpty()) {
+        if (!username.isEmpty()) {
             Predicate p = builder.equal(root.get("username").as(String.class), username.trim());
             query = query.where(p);
         }

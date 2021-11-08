@@ -6,6 +6,7 @@
 package com.qlpmtu.pojos;
 
 import java.util.Date;
+import java.util.ArrayList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -76,20 +77,7 @@ public class YTa {
         this.idYT = idYT;
     }
 
-    /**
-     * @return the hoYTa
-     */
-    public String getHoYTa() {
-        return hoYTa;
-    }
-
-    /**
-     * @param hoYTa the hoYTa to set
-     */
-    public void setHoYTa(String hoYTa) {
-        this.hoYTa = hoYTa;
-    }
-
+    
     /**
      * @return the tenYta
      */
@@ -242,6 +230,20 @@ public class YTa {
      */
     public void setUserID(User userID) {
         this.userID = userID;
+    }
+
+    /**
+     * @return the hoYTa
+     */
+    public String getHoYTa() {
+        return hoYTa;
+    }
+
+    /**
+     * @param hoYTa the hoYTa to set
+     */
+    public void setHoYTa(String hoYTa) {
+        this.hoYTa = hoYTa;
     }
     
 }

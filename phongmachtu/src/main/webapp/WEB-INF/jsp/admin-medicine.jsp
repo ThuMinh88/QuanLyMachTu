@@ -32,22 +32,8 @@
                             <th>Loại thuốc</th>
                             <th>Nhà cung cấp</th>
                             <th>Mô tả</th>
-                            <th></th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Mã</th>
-                            <th>Tên thuốc</th>
-                            <th>Số lượng</th>
-                            <th>Hạn sử dụng</th>
-                            <th>Giá bán</th>
-                            <th>Loại thuốc</th>
-                            <th>Nhà cung cấp</th>
-                            <th>Mô tả</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <j:forEach var="t" items="${thuoc}">
                             <tr>
@@ -57,10 +43,10 @@
                                 <td>${t.hanSuDung}</td>
                                 <td>${t.giaBan}</td>
                                 <td>${t.danhMucThuoc.tenDM}</td>
-                                <td>${t.danhMucThuoc.tenDM} Chưa sửa</td>
-                                <td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm"><a class = "dropdown-item" href="#showModal"  data-toggle="modal" role="button">...</a></td>
+                                <td>${t.nhaCungCap.tenNCC}</td>
+                                <td>${t.moTa}</td>
+                                <!--<td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm"><a class = "dropdown-item" href="#showModal"  data-toggle="modal" role="button">...</a></td> --> 
                             </tr>
-
                         </j:forEach>
 
                     </tbody>

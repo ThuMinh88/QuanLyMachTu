@@ -17,7 +17,35 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "nhacungcap")
-public class Nhacungcap {
+public class NhaCungCap {
+
+    /**
+     * @return the idNCC
+     */
+    public int getIdNCC() {
+        return idNCC;
+    }
+
+    /**
+     * @param idNCC the idNCC to set
+     */
+    public void setIdNCC(int idNCC) {
+        this.idNCC = idNCC;
+    }
+
+    /**
+     * @return the tenNCC
+     */
+    public String getTenNCC() {
+        return tenNCC;
+    }
+
+    /**
+     * @param tenNCC the tenNCC to set
+     */
+    public void setTenNCC(String tenNCC) {
+        this.tenNCC = tenNCC;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idNCC;

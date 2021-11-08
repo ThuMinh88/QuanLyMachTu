@@ -50,7 +50,7 @@ public class Thuoc implements Serializable{
     private DanhMucThuoc danhMucThuoc;
     @ManyToOne
     @JoinColumn(name = "idNCC")
-    private Nhacungcap nhaCungCap;
+    private NhaCungCap nhaCungCap;
     /**
      * @return the idThuoc
      */
@@ -152,14 +152,14 @@ public class Thuoc implements Serializable{
     /**
      * @return the nhaCungCap
      */
-    public Nhacungcap getNhaCungCap() {
+    public NhaCungCap getNhaCungCap() {
         return nhaCungCap;
     }
 
     /**
      * @param nhaCungCap the nhaCungCap to set
      */
-    public void setNhaCungCap(Nhacungcap nhaCungCap) {
+    public void setNhaCungCap(NhaCungCap nhaCungCap) {
         this.nhaCungCap = nhaCungCap;
     }
    

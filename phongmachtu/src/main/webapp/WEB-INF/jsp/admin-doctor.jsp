@@ -40,23 +40,6 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>ID</th>
-                            <th>Họ và tên đệm</th>
-                            <th>Tên</th>
-                            <th>Giới tính</th>
-                            <th>Năm sinh</th>
-                            <th>Chức vụ</th>
-                            <th>Chuyên khoa</th>
-                            <th>Bằng cấp</th>
-                            <th>Kinh nghiệm</th>
-                            <th>Số điện thoại</th>
-                            <th>Email</th>
-                            <th>Địa Chỉ</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <j:forEach var="t" items="${bacsi}">
                             <tr>
@@ -74,7 +57,6 @@
                                 <td>${t.diaChi}</td>
                                 <td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm" role="button">Xóa</a></td>
                             </tr>
-                            
                     </j:forEach>
                     </tbody>
                 </table>

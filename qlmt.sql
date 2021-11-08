@@ -127,13 +127,13 @@ CREATE TABLE `benhnhan` (
   `idBN` int NOT NULL AUTO_INCREMENT,
   `hoBN` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `tenBN` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `gioitinh` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sodienthoai` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gioitinh` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sodienthoai` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `namsinh` date DEFAULT NULL,
-  `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `diachi` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `benhan` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `user_id` int DEFAULT NULL,
+  `user_id` int NOT NULL,
   PRIMARY KEY (`idBN`),
   KEY `fk_benhnhan_taikhoan` (`user_id`),
   CONSTRAINT `fk_benhnhan_taikhoan` FOREIGN KEY (`user_id`) REFERENCES `taikhoan` (`idTK`)
@@ -161,6 +161,9 @@ CREATE TABLE `chitietdonthuoc` (
   `idDT` int NOT NULL,
   `idthuoc` int NOT NULL,
   `soluong` int NOT NULL,
+  `trieuchung` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `chuandoan` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lieuluong` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `dongia` decimal(10,0) NOT NULL,
   `thanhtien` decimal(10,0) NOT NULL,
   KEY `fk_chitietdonthuoc_donthuoc_idx` (`idDT`),
@@ -176,7 +179,7 @@ CREATE TABLE `chitietdonthuoc` (
 
 LOCK TABLES `chitietdonthuoc` WRITE;
 /*!40000 ALTER TABLE `chitietdonthuoc` DISABLE KEYS */;
-INSERT INTO `chitietdonthuoc` VALUES (1,10,2,30000,60000);
+INSERT INTO `chitietdonthuoc` VALUES (1,10,2,'Đau họng, sốt, ho','Số - Ho Khan','Sáng: 1; Chiều: 1',30000,60000);
 /*!40000 ALTER TABLE `chitietdonthuoc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -300,12 +303,8 @@ DROP TABLE IF EXISTS `phieukhambenh`;
 CREATE TABLE `phieukhambenh` (
   `idphieuKB` int NOT NULL AUTO_INCREMENT,
   `idBN` int NOT NULL,
-  `idBS` int NOT NULL,
-  `ngaykham` datetime NOT NULL,
   `xacnhan` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`idphieuKB`),
-  CONSTRAINT `fk_phieukb_basi` FOREIGN KEY (`idphieuKB`) REFERENCES `bacsi` (`idBS`),
-  CONSTRAINT `fk_phieukb_benhnhan` FOREIGN KEY (`idphieuKB`) REFERENCES `benhnhan` (`idBN`)
+  PRIMARY KEY (`idphieuKB`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -315,7 +314,7 @@ CREATE TABLE `phieukhambenh` (
 
 LOCK TABLES `phieukhambenh` WRITE;
 /*!40000 ALTER TABLE `phieukhambenh` DISABLE KEYS */;
-INSERT INTO `phieukhambenh` VALUES (1,21040001,21020011,'2021-10-01 00:00:00',0);
+INSERT INTO `phieukhambenh` VALUES (1,21040001,0);
 /*!40000 ALTER TABLE `phieukhambenh` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -331,9 +330,9 @@ CREATE TABLE `taikhoan` (
   `username` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `avatar` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `user_role` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_role` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`idTK`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -342,7 +341,7 @@ CREATE TABLE `taikhoan` (
 
 LOCK TABLES `taikhoan` WRITE;
 /*!40000 ALTER TABLE `taikhoan` DISABLE KEYS */;
-INSERT INTO `taikhoan` VALUES (1,'lehao01','11',NULL,'ROLE_ADMIN'),(2,'nguyenxun02','11',NULL,'ROLE_ADMIN'),(3,'nguyendat01','11',NULL,'ROLE_DOCTOR'),(4,'hoangxuan02','11',NULL,'ROLE_DOCTOR'),(5,'bs3','11',NULL,'ROLE_DOCTOR'),(6,'bs4','11',NULL,'ROLE_DOCTOR'),(7,'bs5','11',NULL,'ROLE_DOCTOR'),(8,'yt1','11',NULL,'ROLE_NURSE'),(9,'yt2','11',NULL,'ROLE_NURSE'),(10,'yt3','11',NULL,'ROLE_NURSE'),(11,'benhnhan1','11',NULL,'ROLE_USER'),(12,'bn2','11',NULL,'ROLE_USER'),(13,'bn3','11',NULL,'ROLE_USER');
+INSERT INTO `taikhoan` VALUES (1,'lehao01','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_ADMIN'),(2,'nguyenxun02','$2a$10$K05rxa1dOcMjjJ4vWb7jsORYKk4SBwu/bWIOi6l4VC7oc22sZ/5ay',NULL,'ROLE_ADMIN'),(3,'nguyendat01','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_DOCTOR'),(4,'hoangxuan02','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_DOCTOR'),(5,'bs3','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_DOCTOR'),(6,'bs4','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_DOCTOR'),(7,'bs5','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_DOCTOR'),(8,'yt1','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_NURSE'),(9,'yt2','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_NURSE'),(10,'yt3','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_NURSE'),(11,'benhnhan1','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_USER'),(12,'bn2','$2a$2a$10$QhP9ZqWo2LjtzlZLxXOVLesYQ3jUYsh/FEafrgVxvPVcCP32Gru0O',NULL,'ROLE_USER'),(13,'bn3','$2a$10$YlyV1k8hhm4imEjQInR.F.HujqZCj9Fx2GNCUYYZzveJYkPLlVqvG',NULL,'ROLE_USER');
 /*!40000 ALTER TABLE `taikhoan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -425,4 +424,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-04  8:03:37
+-- Dump completed on 2021-11-06 23:45:00

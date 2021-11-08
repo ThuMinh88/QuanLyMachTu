@@ -43,22 +43,6 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>ID</th>
-                            <th>Họ và tên đệm</th>
-                            <th>Tên</th>
-                            <th>Giới tính</th>
-                            <th>Năm sinh</th>
-                            <th>Chức vụ</th>
-                            <th>Bằng cấp</th>
-                            <th>Kinh nghiệm</th>
-                            <th>Số điện thoại</th>
-                            <th>Email</th>
-                            <th>Địa Chỉ</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <j:forEach var="t" items="${yta}">
                             <tr>
@@ -74,9 +58,7 @@
                                 <td>${t.email}</td>
                                 <td>${t.diaChi}</td> 
                                 <td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm" role="button">Xóa</a></td>
-
                             </tr>
-
                         </j:forEach>
                     </tbody>
                 </table>
@@ -87,7 +69,7 @@
 </div>
 <!-- /.container-fluid -->
 <!-- Showall Modal -->
-<div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ <div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -105,7 +87,7 @@
                             <form:form method="post" enctype="multipart/form-data" modelAttribute="yta" class="form-group col-xl-12 ">
                                 <div>
                                     <label for="ho">Họ và tên đệm<span class="text-danger">*</span></label>
-                                    <form:input id="hoYta" path="hoYta" class="form-control"/>
+                                    <form:input id="hoYTa" path="hoYTa" class="form-control"/>
                                 </div>
                                 <div class="my-4">
                                     <label for="ten">Tên Y Tá<span class="text-danger">*</span></label>
@@ -153,3 +135,4 @@
         </div>
     </div>
 </div>
+ 

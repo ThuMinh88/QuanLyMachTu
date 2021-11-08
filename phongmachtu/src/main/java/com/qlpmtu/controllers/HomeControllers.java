@@ -29,7 +29,13 @@ public class HomeControllers {
          model.addAttribute("currentUser", session.getAttribute("currentUser"));
          return "appointment";
      }
-     
-
+      @GetMapping("/contact")
+     public String contact(Model model){
+         return "contact";
+     }
+      @GetMapping("/about")
+     public String about(Model model){
+         return "about";
+     }
 
 }

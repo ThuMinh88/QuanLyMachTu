@@ -9,21 +9,11 @@ import com.qlpmtu.pojos.BenhNhan;
 import com.qlpmtu.pojos.User;
 import com.qlpmtu.service.BenhNhanService;
 import com.qlpmtu.service.UserService;
-<<<<<<< Updated upstream
-//import com.qlpmtu.valitator.WebAppValidator;
-=======
->>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-<<<<<<< Updated upstream
-//import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
-//import org.springframework.web.bind.annotation.InitBinder;
-=======
-import org.springframework.web.bind.annotation.GetMapping;
->>>>>>> Stashed changes
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,22 +33,13 @@ public class UserController {
 
 //    @Autowired
 //    private WebAppValidator userValidator;
-<<<<<<< Updated upstream
-    
-=======
 //    
->>>>>>> Stashed changes
 //    @InitBinder
 //    public void init(WebDataBinder binder) {
 //        binder.setValidator(userValidator);
 //    }
-<<<<<<< Updated upstream
-    
-    @GetMapping("/login")
-=======
 //    
     @GetMapping(value = "/login")
->>>>>>> Stashed changes
      public String login(){
          return "login";
      }

@@ -1,54 +1,54 @@
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\PhieuKhamBenh.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\BenhNhanRepository.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\UserPassValidator.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DonThuoc.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\BacSiRepository.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\HomeControllers.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\UserReponsitory.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\HibernateConfig.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\DanhMucThuocRepositoryImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\BenhNhanService.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\DanhMucThuocServiceImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\WebAppValidator.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\MyAccessDeniedHandler.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BenhNhanServiceImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\UserReponsitoryImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\PhieuKhamBenhRepository.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\WebApplicationContextConfig.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\User.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\BacSiReponsitoryImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ThuocService.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\PatientControllers.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\YTaServiceImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\DispatcherServletInitializer.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\MedicineControllers.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\SecurityWebAppInitializer.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\DanhMucThuocRepository.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Thuoc.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\LogoutHandler.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\ChiTietDonThuoc.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\NurseControllers.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Nhacungcap.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\YTaService.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\UserServiceImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\YTa.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\BenhNhanRepositoryImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\YTaRepository.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\SpringSecurityConfig.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\TilesConfig.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\BacSiService.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\DanhMucThuocService.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\AdminControllers.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\YTaRepositoryImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BacSiServiceImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\BenhNhan.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Admin.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\DoctorControllers.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\UserService.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DanhMucThuoc.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\ThuocRepository.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\ThuocRepositoryImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\ThuocServiceImpl.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\LoginSuccessHandler.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\BacSi.java
-C:\Users\ACER\Documents\NetBeansProjects\QuanLyMachTu_DoAn\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\UserController.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\BenhNhanService.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\LogoutHandler.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\UserReponsitory.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BacSiServiceImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\PhieuKhamBenh.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\SpringSecurityConfig.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\MyAccessDeniedHandler.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\UserController.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\SecurityWebAppInitializer.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\PhieuKhamBenhRepository.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\BacSiRepository.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\YTaRepository.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\YTaService.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\HibernateConfig.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\ChiTietDonThuoc.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\YTaRepositoryImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BenhNhanServiceImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\ThuocRepository.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Admin.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\BacSi.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\BacSiReponsitoryImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\PatientControllers.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\HomeControllers.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DonThuoc.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\AdminControllers.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\MedicineControllers.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\YTaServiceImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\DispatcherServletInitializer.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\User.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\DanhMucThuocRepository.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\WebApplicationContextConfig.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\LoginSuccessHandler.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ThuocService.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\TilesConfig.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\ThuocRepositoryImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\ThuocServiceImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\BenhNhanRepository.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\UserServiceImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\BenhNhan.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Thuoc.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\BacSiService.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\DanhMucThuocServiceImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\UserPassValidator.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\UserReponsitoryImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\NhaCungCap.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\UserService.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\DoctorControllers.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\WebAppValidator.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\NurseControllers.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\DanhMucThuocService.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\BenhNhanRepositoryImpl.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DanhMucThuoc.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\YTa.java
+C:\Users\DAO\Downloads\QuanLyMachTu_DoAn (1)\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\DanhMucThuocRepositoryImpl.java

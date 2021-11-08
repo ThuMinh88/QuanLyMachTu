@@ -6,11 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" 
-<<<<<<< Updated upstream
-uri="http://www.springframework.org/tags" %>
-=======
            uri="http://www.springframework.org/tags" %>
->>>>>>> Stashed changes
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <c:url value="/register" var="action"/>
@@ -22,17 +18,8 @@ uri="http://www.springframework.org/tags" %>
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="sub-main-w3">
 
-<<<<<<< Updated upstream
-                    <c:if test="${errMsg != null}">
-                        <div class="alert alert-danger">
-                            ${errMsg}
-                        </div>
-                    </c:if>
-                    
-=======
                     
 
->>>>>>> Stashed changes
                     <div class="wthree-pro">
                         <h2>Đăng kí tài khoản</h2>
                     </div>
@@ -46,19 +33,11 @@ uri="http://www.springframework.org/tags" %>
 
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <label for="firstname">Họ và tên đệm</label>
-<<<<<<< Updated upstream
-                                <form:input type="text" class="form-control form-control-user" id="firstname" path="firstname"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="lastname">Tên người dùng</label>
-                                <form:input type="text" class="form-control form-control-user" id="lastname" path="lastname"/>
-=======
                                 <form:input type="firstname" class="form-control form-control-user" id="firstname" path="firstname"/>
                             </div>
                             <div class="col-sm-6">
                                 <label for="lastname">Tên người dùng</label>
                                 <form:input type="lastname" class="form-control form-control-user" id="lastname" path="lastname"/>
->>>>>>> Stashed changes
                             </div>
 
                         </div>
@@ -71,36 +50,24 @@ uri="http://www.springframework.org/tags" %>
                         <div class="form-group">
                             <label for="username">Tên đăng nhập</label>
                             <form:input type="username" class="form-control form-control-user"
-<<<<<<< Updated upstream
-                                   id="username" path="username" placeholder="Username"/>
-=======
                                         id="username" path="username" placeholder="Username"/>
                             <form:errors path="username" class="text-danger" element="div"/>
 
->>>>>>> Stashed changes
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <label for="password">Mật khẩu</label>
                                 <form:input type="password" class="form-control form-control-user"
-<<<<<<< Updated upstream
-                                       id="password" path="password" placeholder="Password"/>
-=======
                                             id="password" path="password" placeholder="Password"/>
                                 <form:errors path="password" class="alert alert-danger" element="div"/>
 
->>>>>>> Stashed changes
                             </div>
                             <div class="col-sm-6">
                                 <label for="confirm-password">Nhập lại mật khẩu</label>
                                 <form:input type="password" class="form-control form-control-user"
-<<<<<<< Updated upstream
-                                       id="confirm-password" path="confirmPassword"  placeholder="Confirm Password"/>
-=======
                                             id="confirm-password" path="confirmPassword"  placeholder="Confirm Password"/>
                                 <form:errors path="confirmPassword" class="alert alert-danger" element="div"/>
 
->>>>>>> Stashed changes
                             </div>
                         </div>
                         <div class="form-group">
