@@ -7,6 +7,10 @@ package com.qlpmtu.configs;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.qlpmtu.valitator.UserPassValidator;
+import com.qlpmtu.valitator.WebAppValidator;
+import java.util.HashSet;
+import java.util.Set;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -35,9 +39,10 @@ import org.springframework.web.servlet.view.JstlView;
     "com.qlpmtu.repository",
     "com.qlpmtu.service"
 })
-public class WebApplicationContextConfig implements WebMvcConfigurer{
+public class WebApplicationContextConfig implements WebMvcConfigurer {
+
     @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer){
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
 
@@ -52,46 +57,64 @@ public class WebApplicationContextConfig implements WebMvcConfigurer{
         registry.addResourceHandler("/vendor/**")
                 .addResourceLocations("/resources/vendor/");
     }
-    
-    
-    @Bean 
-    public InternalResourceViewResolver getInternalResourceViewResolver(){
+
+    @Bean
+    public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resource = new InternalResourceViewResolver();
-        
+
         resource.setViewClass(JstlView.class);
         resource.setPrefix("/WEB-INF/jsp/");
         resource.setSuffix(".jsp");
-        return resource;  
+        return resource;
     }
-    
+
 //    @Override
 //    public Validator getValidator() {
 //        return validator();
 //    }
-//    
+
+//    @Bean
+//    public WebAppValidator userValidator() {
+//        Set<Validator> validators = new HashSet<>();
+//        validators.add(new UserPassValidator());
+//
+//        WebAppValidator v = new WebAppValidator();
+//        v.setSpringValidators(validators);
+//        return v;
+//    }
+//
 //    @Bean
 //    public LocalValidatorFactoryBean validator() {
 //        LocalValidatorFactoryBean v = new LocalValidatorFactoryBean();
 //        v.setValidationMessageSource(messageSource());
-//        
+//
 //        return v;
 //    }
-    
+
     @Bean
-    public MessageSource messageSource(){
+    public MessageSource messageSource() {
         ResourceBundleMessageSource source = new ResourceBundleMessageSource();
         source.setBasename("messages");
         return source;
     }
-    
+
     @Bean
     public CommonsMultipartResolver multipartResolver() {
         CommonsMultipartResolver resolver = new CommonsMultipartResolver();
         resolver.setDefaultEncoding("UTF-8");
-        
+
         return resolver;
     }
-    
-    
-    
+
+    @Bean
+    public Cloudinary cloudinary() {
+        Cloudinary c = new Cloudinary(ObjectUtils.asMap(
+                "cloud_name", "minh-thu",
+                "api_key", "873584343834566",
+                "api_secret", "NQFslJoRHx0qQ16n6eM3j0-WTSI",
+                "secure", true
+        ));
+        return c;
+    }
+
 }

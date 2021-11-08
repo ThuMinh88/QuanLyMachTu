@@ -3,13 +3,14 @@
     Created on : Nov 2, 2021, 11:08:19 AM
     Author     : ACER
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
   
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" class="top d-flex align-items-center">
     <div class="container">
       <h1>Chăm sóc sức khỏe cùng OTC</h1>
       <h2>Hãy cùng chúng tôi để được hỗ trợ sức khỏe tốt nhất!</h2>

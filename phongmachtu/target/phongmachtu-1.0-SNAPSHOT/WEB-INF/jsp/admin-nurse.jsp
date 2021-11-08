@@ -6,6 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <!-- Begin Page Content -->
 
@@ -14,7 +16,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Bảng danh sách</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"> Chỉnh sửa</a>
+        <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" ><a href="<j:url value="/create-nurse"/>"style="color: #ffffff;"/>Chỉnh sửa</button>
     </div>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">

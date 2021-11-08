@@ -43,6 +43,11 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="content" value="/WEB-INF/jsp/register.jsp"/>
     </definition>
     
+    <!--Trang Đăng kí-->
+    <definition name="appointment" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/appointment.jsp"/>
+    </definition>
+    
     <!--Trang chủ-->
     <definition name="admin-index" extends="baseLayout">
         <put-attribute name="content" value="/WEB-INF/jsp/admin-index.jsp"/>
@@ -67,6 +72,14 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="admin-medicine" extends="baseLayout">
         <put-attribute name="content" value="/WEB-INF/jsp/admin-medicine.jsp"/>
     </definition>
+    
+    <!-- ============================TRANG CHINH SUA=============================-->
+    
+    <!--Trang them yta-->
+    <definition name="create-nurse" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/create-nurse.jsp"/>
+    </definition>
+    
     
 </tiles-definitions>
 

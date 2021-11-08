@@ -6,6 +6,7 @@
 package com.qlpmtu.controllers;
 
 
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,16 +24,9 @@ public class HomeControllers {
          return "index";
      }
      
-     
-     
-     @GetMapping("/register")
-     public String register(Model model){
-         return "register";
+     @GetMapping("/appointment")
+     public String appointment(Model model, HttpSession session){
+         model.addAttribute("currentUser", session.getAttribute("currentUser"));
+         return "appointment";
      }
-     
-     @GetMapping("/admin-index")
-     public String indexAD(Model model){
-         return "admin-index";
-     }
-
 }

@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -33,10 +34,10 @@ public class BenhNhan{
     private int idBenhNhan;
     
     @Column(name = "hoBN")
-    private String hoBenhNhan;
+    private String firstname;
     
     @Column(name = "tenBN")
-    private String tenBenhNhan;
+    private String lastname;
     
     @Column(name = "gioitinh")
     private String gioiTinh;
@@ -51,13 +52,23 @@ public class BenhNhan{
     private String email;
     
     private String diachi;
-//    
-//    @Column(name = "anhdaidien")
-//    private String avt;
+    
+    @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User userID;
     
     @Column(name = "benhan")
     private String benhAn;
 
+    public BenhNhan(){
+        
+    }
+    public BenhNhan(Integer id){
+        this.idBenhNhan = id;
+    }
+    
+   
+    
     /**
      * @return the idBenhNhan
      */
@@ -72,34 +83,7 @@ public class BenhNhan{
         this.idBenhNhan = idBenhNhan;
     }
 
-    /**
-     * @return the hoBenhNhan
-     */
-    public String getHoBenhNhan() {
-        return hoBenhNhan;
-    }
-
-    /**
-     * @param hoBenhNhan the hoBenhNhan to set
-     */
-    public void setHoBenhNhan(String hoBenhNhan) {
-        this.hoBenhNhan = hoBenhNhan;
-    }
-
-    /**
-     * @return the tenBenhNhan
-     */
-    public String getTenBenhNhan() {
-        return tenBenhNhan;
-    }
-
-    /**
-     * @param tenBenhNhan the tenBenhNhan to set
-     */
-    public void setTenBenhNhan(String tenBenhNhan) {
-        this.tenBenhNhan = tenBenhNhan;
-    }
-
+    
     /**
      * @return the gioiTinh
      */
@@ -196,6 +180,62 @@ public class BenhNhan{
      */
     public void setDiachi(String diachi) {
         this.diachi = diachi;
+    }
+//
+//    /**
+//     * @return the userId
+//     */
+//    public User getUserId() {
+//        return userId;
+//    }
+//
+//    /**
+//     * @param userId the userId to set
+//     */
+//    public void setUserId(User userId) {
+//        this.userId = userId;
+//    }
+
+    /**
+     * @return the userID
+     */
+    public User getUserID() {
+        return userID;
+    }
+
+    /**
+     * @param userID the userID to set
+     */
+    public void setUserID(User userID) {
+        this.userID = userID;
+    }
+
+    /**
+     * @return the firstname
+     */
+    public String getFirstname() {
+        return firstname;
+    }
+
+    /**
+     * @param firstname the firstname to set
+     */
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    /**
+     * @return the lastname
+     */
+    public String getLastname() {
+        return lastname;
+    }
+
+    /**
+     * @param lastname the lastname to set
+     */
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
 }

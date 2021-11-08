@@ -15,4 +15,6 @@ import java.util.List;
 public interface YTaService {
     List<YTa> getYTas();
     YTa getYTaById(int ytaId);
+    boolean addYTa(YTa yt);
+    boolean deleteYta(int ytaID);
 }

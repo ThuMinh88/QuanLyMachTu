@@ -10,20 +10,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  *
  * @author ACER
  */
 @Controller
+@RequestMapping("/admin")
 public class PatientControllers {
-    @Autowired
-    private BenhNhanService benhNhanService;
-    
-    @GetMapping("/admin-patient")
-    public  String BenhNhan(Model model){
-        model.addAttribute("benhnhan", this.benhNhanService.getBenhNhans());
-        return "admin-patient";
-    }
-    
+//    @Autowired
+//    private BenhNhanService benhNhanService;
+//    
+//    @GetMapping("/admin-patient")
+//    public  String BenhNhan(Model model){
+//        model.addAttribute("benhnhan", this.benhNhanService.getBenhNhans());
+//        return "admin-patient";
+//    }
+//    
 }
