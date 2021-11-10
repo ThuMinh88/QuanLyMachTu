@@ -45,4 +45,17 @@ public class ThuocRepositoryImpl implements ThuocRepository{
         Query q = session.createQuery(query);
         return q.getResultList();
     }
+
+    @Override
+    public boolean addOrUpdate(Thuoc thuoc) {
+        Session sesion = this.sessionFactory.getObject().getCurrentSession();
+        try{
+            sesion.save(thuoc);
+            return true;
+        } catch(Exception ex){
+            System.err.println("==ADD THUOC ERR" + ex.getMessage());
+            ex.printStackTrace();
+        }
+        return false;
+    }
 }

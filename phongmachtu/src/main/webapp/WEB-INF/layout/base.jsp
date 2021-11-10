@@ -4,6 +4,10 @@
     Author     : ACER
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form"
+           uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring"
+           uri="http://www.springframework.org/tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <!DOCTYPE html>
@@ -15,6 +19,8 @@
         <title><tiles:insertAttribute name="title" /></title>
         <link href="<c:url value="/img/logo.png"/>" rel="icon">
         <!-- Vendor CSS Files -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
         <link href="vendor/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
         <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
         <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -28,15 +34,15 @@
         <link href="css/styleLogin.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     <body>
-        
+
         <!-- HEADER -->
-            <tiles:insertAttribute name="header"/>
-        
+        <tiles:insertAttribute name="header"/>
+
         <!-- CONTENT -->
-            <tiles:insertAttribute name="content"/>
-            
+        <tiles:insertAttribute name="content"/>
+
         <!-- Footer -->
-            <tiles:insertAttribute name="footer"/>
+        <tiles:insertAttribute name="footer"/>
         <!-- End of Footer -->
 
         <div id="preloader"></div>

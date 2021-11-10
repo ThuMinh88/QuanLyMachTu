@@ -13,5 +13,8 @@ import java.util.List;
  * @author ACER
  */
 public interface BenhNhanRepository {
+    BenhNhan getBenhNhanById(int i);
     List<BenhNhan> getBenhNhans();
+    boolean addName(BenhNhan bn);
+    long countBenhNhan();
 }

@@ -25,6 +25,16 @@ public class ThuocServiceImpl implements ThuocService{
     public List<Thuoc> getThuocs(String kw) {
         return this.thuocRepository.getThuocs(kw);
     }
+
+    @Override
+    public boolean addOrUpdate(Thuoc thuoc) {
+        try{
+            return this.thuocRepository.addOrUpdate(thuoc);
+        }catch(Exception ex){
+            System.err.println("==ADD THUOC ERR" + ex.getMessage());
+        }
+        return false;
+    }
     
     
 }

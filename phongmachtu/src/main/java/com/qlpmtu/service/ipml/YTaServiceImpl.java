@@ -31,5 +31,15 @@ public class YTaServiceImpl implements YTaService{
     public YTa getYTaById(int ytaId) {
         return this.yTaRepository.getYTaById(ytaId);
     }
+
+    @Override
+    public boolean addYTa(YTa yt) {
+        return this.yTaRepository.addYTa(yt);
+    }
+
+    @Override
+    public boolean deleteYta(int ytaID) {
+        return this.yTaRepository.deleteYta(ytaID);
+    }
     
 }

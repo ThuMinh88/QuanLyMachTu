@@ -18,6 +18,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 /**
  *
@@ -27,27 +34,49 @@ import javax.persistence.TemporalType;
 @Table(name = "thuoc")
 public class Thuoc implements Serializable{
 
+    
+
+   
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idthuoc")
     private int idThuoc;
+    
+   @NotEmpty(message="{thuoc.empty.emptyErr}")
     @Column(name = "tenthuoc")
     private String tenThuoc;
+   
+   @NotNull(message="{thuoc.empty.emptyErr}")
     @Column(name = "soluong")
     private BigDecimal soLuong;
-    @Column(name = "hansudung")
+   
+   
+    
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @Temporal(TemporalType.DATE)
+    @Past
+    @Column(name = "hansudung")
     private Date hanSuDung;
+   
+   //@NotEmpty(message="{thuoc.empty.emptyErr}")
+    //@Min(value = 1000, message="{thuoc.giaban.minErr}")
+    @NotNull(message="{thuoc.empty.emptyErr}")
     @Column(name = "giaban")
     private BigDecimal giaBan;
+    
     @Column(name = "mota")
     private String moTa;
+    
+   
     @ManyToOne
     @JoinColumn(name = "idDMT")
     private DanhMucThuoc danhMucThuoc;
+    
+   
     @ManyToOne
     @JoinColumn(name = "idNCC")
-    private Nhacungcap nhaCungCap;
+    private NhaCungCap nhaCungCap;
     /**
      * @return the idThuoc
      */
@@ -90,20 +119,7 @@ public class Thuoc implements Serializable{
         this.soLuong = soLuong;
     }
 
-    /**
-     * @return the hanSuDung
-     */
-    public Date getHanSuDung() {
-        return hanSuDung;
-    }
-
-    /**
-     * @param hanSuDung the hanSuDung to set
-     */
-    public void setHanSuDung(Date hanSuDung) {
-        this.hanSuDung = hanSuDung;
-    }
-
+    
     /**
      * @return the giaBan
      */
@@ -149,16 +165,28 @@ public class Thuoc implements Serializable{
     /**
      * @return the nhaCungCap
      */
-    public Nhacungcap getNhaCungCap() {
+    public NhaCungCap getNhaCungCap() {
         return nhaCungCap;
     }
 
     /**
      * @param nhaCungCap the nhaCungCap to set
      */
-    public void setNhaCungCap(Nhacungcap nhaCungCap) {
+    public void setNhaCungCap(NhaCungCap nhaCungCap) {
         this.nhaCungCap = nhaCungCap;
     }
-   
+   /**
+     * @return the hanSuDung
+     */
+    public Date getHanSuDung() {
+        return hanSuDung;
+    }
+
+    /**
+     * @param hanSuDung the hanSuDung to set
+     */
+    public void setHanSuDung(Date hanSuDung) {
+        this.hanSuDung = hanSuDung;
+    }
     
 }

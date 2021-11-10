@@ -14,4 +14,5 @@ import java.util.List;
  */
 public interface ThuocService {
     List<Thuoc> getThuocs(String kw);
+    boolean addOrUpdate(Thuoc thuoc);
 }

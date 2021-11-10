@@ -5,6 +5,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <!-- ======= Login Section ======= -->
 
@@ -13,7 +14,7 @@
         <div class="col-lg-12 d-flex align-items-stretch">
             <div class="sub-main-w3">
                 <div class="wthree-pro">
-                    <h2>Đăng nhập</h2>
+                    <h2>Đăng nhập</h2> 
                     <c:if test="${param.error != null}">
                         <div class="alert alert-danger">
                             Da co loi xay ra! Vui long quay lai sau!
@@ -24,24 +25,31 @@
                             Ban khong co quyen truy cap!!!
                         </div>
                     </c:if>
+
                 </div>
                 <c:url value="/login" var="action" />
-                <form action="${action}" method="post" class="user">
+                <form:form action="${action}" method="post" modelAttribute="user">
                     <div class="col-sm-10 pom-agile form-group">
-                        <input placeholder="Tên đăng nhập" name="username" id="username" class="form-control" type="text" >
+                        <label for="username">Username</label>
+                        <form:input placeholder="Tên đăng nhập" path="username" id="username" class="form-control" type="text" />
+                       
+                            <form:errors path="username" cssClass="alert-danger" element="div"/>
+                        
                         <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
                     </div>
                     <div class="pom-agile col-sm-8 form-group">
-                        <input placeholder="Password" type="password" id="password" name="password" class="form-control">
+                        <label for="password">Password</label>
+                        <form:input placeholder="Password" type="password" id="password" path="password" class="form-control"/>
+                        <form:errors path="password" cssClass="alert-danger" element="div"/>
                         <span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
                     </div>
                     <div class="sub-w3l">
-                        <h6><a href="<c:url value="/register"/>">Đăng kí tài khoản</a></h6>
+                        <h6><a href="<c:url value="/register"/>" class="text-gray-500"">Đăng kí tài khoản</a></h6>
                         <div class="right-w3l form-group">
                             <input type="submit" value="Đăng Nhập">
                         </div>
                     </div>
-                </form>
+                </form:form>
             </div>
         </div>
     </div>

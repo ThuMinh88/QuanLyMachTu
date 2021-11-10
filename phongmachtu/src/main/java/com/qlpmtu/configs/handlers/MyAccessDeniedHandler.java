@@ -19,8 +19,10 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 public class MyAccessDeniedHandler implements AccessDeniedHandler{
 
     @Override
-    public void handle(HttpServletRequest hsr, HttpServletResponse hsr1, AccessDeniedException ade) throws IOException, ServletException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException ade) throws IOException, ServletException {
+        System.out.println("Test == " + request.getContextPath());
+                response.sendRedirect("/?accessDenied&next=" + request.getContextPath());
+
     }
     
 }

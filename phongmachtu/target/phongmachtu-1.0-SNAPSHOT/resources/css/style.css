@@ -20,6 +20,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.bg-login-image {
+  background: url("../img/hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/

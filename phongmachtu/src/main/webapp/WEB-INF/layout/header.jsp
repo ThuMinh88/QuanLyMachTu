@@ -8,9 +8,10 @@
 <!DOCTYPE html>
 <!-- ======= Top Bar ======= -->
 <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <image class="fixed-top" src="<c:url value="/img/logo.png"/>" width="200" height="100" alt="LOGO"/>
     <div class="container d-flex">
         <div class="contact-info mr-auto">
-            <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+            <i class="icofont-envelope"></i> <a href="mailto:otc@example.com">otc@example.com</a>
             <i class="icofont-phone"></i> +84 1600 0001 
             <i class="icofont-google-map"></i> 371, Nguyễn Kiệm, Gò vấp
         </div>
@@ -34,32 +35,38 @@
         <nav class="nav-menu d-none d-lg-block">
             <ul>
                 <li class="active"><a href="<c:url value="/"/>">Trang chủ</a></li>
-                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="<c:url value="/about"/>">Về chúng tôi</a></li>
                 <li><a href="#services">Dịch vụ</a></li>
                 <li><a href="#departments">Các phòng ban</a></li>
                 <li><a href="#doctors">Bác sĩ</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="<c:url value="/contact"/>">Liên hệ</a></li>
             </ul>
-                
-                
+
         </nav><!-- .nav-menu -->
         <c:if test="${pageContext.request.userPrincipal.name == null}">
 
-            <a href="<c:url value="/login"/>" class="appointment-btn">Đăng kí khám bệnh</a>
+            <a href="<c:url value="/login"/>" class="appointment-btn">
+              <i class="icofont-user" aria-hidden="true"></i> Đăng kí khám bệnh</a>
         </c:if>
+        
         <c:if test="${pageContext.request.userPrincipal.name != null}">
             <nav class="nav-item">
-                <a href="<c:url value="/" />" class="nav-link text-success">
+                <a href="<c:url value="/appointment" />" class="nav-link text-success">
                     <c:if test="${currentUser.avatar != null}">
                         <img style="width:30px;" src="${currentUser.avatar}" class="rounded-circle" />
                     </c:if>
                     <c:if test="${currentUser.avatar == null}">
-                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i class="icofont-user" aria-hidden="true"></i>
                     </c:if>
-
                     ${pageContext.request.userPrincipal.name}
                 </a>
             </nav>
-        </div>
-    </header><!-- End Header -->
+            <nav class="nav-item">
+                <a href="<c:url value="/logout" />" class="nav-link text-success">
+                    Dang xuat
+                </a>
+            </nav>
+        </c:if>
+    </div>
+</header><!-- End Header -->
 

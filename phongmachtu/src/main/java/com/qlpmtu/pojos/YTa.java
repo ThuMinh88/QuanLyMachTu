@@ -6,11 +6,15 @@
 package com.qlpmtu.pojos;
 
 import java.util.Date;
+import java.util.ArrayList;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -55,6 +59,10 @@ public class YTa {
     @Column(name = "kinhnghiem")
     private String kinhNghiem;
 
+        @OneToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User userID;
+    
     /**
      * @return the idYT
      */
@@ -69,20 +77,7 @@ public class YTa {
         this.idYT = idYT;
     }
 
-    /**
-     * @return the hoYTa
-     */
-    public String getHoYTa() {
-        return hoYTa;
-    }
-
-    /**
-     * @param hoYTa the hoYTa to set
-     */
-    public void setHoYTa(String hoYTa) {
-        this.hoYTa = hoYTa;
-    }
-
+    
     /**
      * @return the tenYta
      */
@@ -207,6 +202,48 @@ public class YTa {
      */
     public void setKinhNghiem(String kinhNghiem) {
         this.kinhNghiem = kinhNghiem;
+    }
+//
+//    /**
+//     * @return the userId
+//     */
+//    public User getUserId() {
+//        return userId;
+//    }
+//
+//    /**
+//     * @param userId the userId to set
+//     */
+//    public void setUserId(User userId) {
+//        this.userId = userId;
+//    }
+
+    /**
+     * @return the userID
+     */
+    public User getUserID() {
+        return userID;
+    }
+
+    /**
+     * @param userID the userID to set
+     */
+    public void setUserID(User userID) {
+        this.userID = userID;
+    }
+
+    /**
+     * @return the hoYTa
+     */
+    public String getHoYTa() {
+        return hoYTa;
+    }
+
+    /**
+     * @param hoYTa the hoYTa to set
+     */
+    public void setHoYTa(String hoYTa) {
+        this.hoYTa = hoYTa;
     }
     
 }

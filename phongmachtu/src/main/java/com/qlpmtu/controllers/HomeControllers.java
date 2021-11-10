@@ -6,9 +6,14 @@
 package com.qlpmtu.controllers;
 
 
+import com.qlpmtu.pojos.Thuoc;
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 /**
@@ -20,19 +25,23 @@ public class HomeControllers {
    
      @GetMapping("/")
      public String index(Model model){
+         
          return "index";
      }
      
-     
-     
-     @GetMapping("/register")
-     public String register(Model model){
-         return "register";
+     @GetMapping("/appointment")
+     public String appointment(Model model, HttpSession session){
+         model.addAttribute("currentUser", session.getAttribute("currentUser"));
+         return "appointment";
      }
-     
-     @GetMapping("/admin-index")
-     public String indexAD(Model model){
-         return "admin-index";
+      @GetMapping("/contact")
+     public String contact(Model model){
+         return "contact";
      }
+      @GetMapping("/about")
+     public String about(Model model){
+         return "about";
+     }
+   
 
 }
