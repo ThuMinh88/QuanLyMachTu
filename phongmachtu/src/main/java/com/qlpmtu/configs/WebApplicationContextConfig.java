@@ -68,10 +68,10 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
         return resource;
     }
 
-//    @Override
-//    public Validator getValidator() {
-//        return validator();
-//    }
+    @Override
+    public Validator getValidator() {
+        return validator();
+    }
 
 //    @Bean
 //    public WebAppValidator userValidator() {
@@ -83,13 +83,13 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
 //        return v;
 //    }
 //
-//    @Bean
-//    public LocalValidatorFactoryBean validator() {
-//        LocalValidatorFactoryBean v = new LocalValidatorFactoryBean();
-//        v.setValidationMessageSource(messageSource());
-//
-//        return v;
-//    }
+    @Bean
+    public LocalValidatorFactoryBean validator() {
+        LocalValidatorFactoryBean v = new LocalValidatorFactoryBean();
+        v.setValidationMessageSource(messageSource());
+
+        return v;
+    }
 
     @Bean
     public MessageSource messageSource() {

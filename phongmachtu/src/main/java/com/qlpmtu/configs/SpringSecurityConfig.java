@@ -88,8 +88,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().accessDeniedHandler(accessDenied);
 //        http.exceptionHandling().
         http.authorizeRequests().antMatchers("/").permitAll()
-                .antMatchers("/admin/**").access("hasRole('ADMIN')")
-                .antMatchers("/**/doctoc-index").access("hasRole('DOCTOR')")
+                .antMatchers("/admin-index").access("hasRole('ADMIN')")
+                .antMatchers("/**/doctor-index").access("hasRole('DOCTOR')")
                 .antMatchers("/**/nurse-index").access("hasRole('NURSE')");
 //        
         http.csrf().disable();

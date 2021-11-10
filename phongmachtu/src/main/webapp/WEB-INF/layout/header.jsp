@@ -45,7 +45,7 @@
         <c:if test="${pageContext.request.userPrincipal.name == null}">
 
             <a href="<c:url value="/login"/>" class="appointment-btn">
-              <i class="icofont-user" aria-hidden="true"></i> Đăng kí khám bệnh</a>
+              <i class="icofont-user" aria-hidden="true"></i> Đăng kí</a>
         </c:if>
         
         <c:if test="${pageContext.request.userPrincipal.name != null}">
@@ -65,6 +65,8 @@
                     Dang xuat
                 </a>
             </nav>
+           <a href="<c:url value="/appointment"/>" class="appointment-btn">
+              <i class="icofont-user" aria-hidden="true"></i> Đăng kí khám bệnh</a>
         </c:if>
     </div>
 </header><!-- End Header -->

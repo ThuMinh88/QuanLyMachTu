@@ -41,6 +41,7 @@ public class AdminControllers {
     @GetMapping("/admin-index")
     public String indexAD(Model model) {
         model.addAttribute("benhnhan", this.benhNhanService.getBenhNhans());
+        model.addAttribute("count", this.benhNhanService.countBenhNhan());
         return "admin-index";
     }
 
@@ -63,26 +64,5 @@ public class AdminControllers {
         return "admin-medicine";
     }
     
-    
-    @Autowired
-    private YTaService yTaService;
-    
-     @GetMapping("/admin-nurse")
-     public String nurseAD(Model model){
-         model.addAttribute("yta", this.yTaService.getYTas());
-         return "admin-nurse";
-     }
-    @RequestMapping(value="/create-nurse", method = RequestMethod.GET)
-    public String nurseADView(Model model) {
-        model.addAttribute("yta", new YTa());
-            return "create-nurse";
-    }  
-     @PostMapping("/create-nurse")
-     public String nurseADadd(Model model, @ModelAttribute(value="yta") YTa yta){
-         if(!this.yTaService.addYTa(yta)){
-             model.addAttribute("errMsg", "Loi!!");
-             return  "/create-nurse";
-         }
-         return "redirect:/admin-nurse";
-     }
+
 }

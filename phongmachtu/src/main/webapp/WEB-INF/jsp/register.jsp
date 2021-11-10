@@ -23,25 +23,7 @@
                     <div class="wthree-pro">
                         <h2>Đăng kí tài khoản</h2>
                     </div>
-                    <form:form method="POST" action="${action}" enctype="multipart/form-data" modelAttribute="benhnhan">
-                        <c:if test="${errMsg != null}">
-                            <div class="alert alert-danger">
-                                ${errMsg}
-                            </div>
-                        </c:if>
-                        <div class="form-group row">
-
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <label for="firstname">Họ và tên đệm</label>
-                                <form:input type="firstname" class="form-control form-control-user" id="firstname" path="firstname"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="lastname">Tên người dùng</label>
-                                <form:input type="lastname" class="form-control form-control-user" id="lastname" path="lastname"/>
-                            </div>
-
-                        </div>
-                    </form:form>
+                    
 
                     <form:form action="${action}" method="POST" enctype="multipart/form-data" modelAttribute="taikhoan">
                         <form:errors path="*" class="alert alert-danger" element="div"/>

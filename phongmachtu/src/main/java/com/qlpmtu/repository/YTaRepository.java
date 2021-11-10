@@ -17,4 +17,5 @@ public interface YTaRepository {
     YTa getYTaById(int ytaID);
     boolean addYTa(YTa yt);
     boolean deleteYta(int ytaID);
+    
 }

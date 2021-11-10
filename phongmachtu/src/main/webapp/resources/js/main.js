@@ -1,9 +1,36 @@
-/**
-* Template Name: Medilab - v2.1.1
-* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+//Catch--------------------------------------------------------------//
+//
+function btnClick(){
+    var ho = document.getElementById('ho');
+    var ten = document.getElementById('ten');
+    var reg_email =/^[A-Za-z0-9]+([_\.\-]?[A-Za-z0-9])*@[A-Za-z0-9]+([\.\-]?[A-Za-z0-9]+)*(\.[A-Za-z]+)+$/;
+    var email = document.getElementById('email');
+    var sex = document.getElementById('gioiTinh');
+    var date = document.getElementById('ngaySinh');
+    var sdt = document.getElementById('sdt');
+    var chucVu = document.getElementById('chucVu');
+    var bangCap = document.getElementById('bangCap');
+    var kinhnghiem = document.getElementById('kinhnghiem');
+    if(ho.value == "" && ten.value == "" && chucVu.value == "")
+    {
+        i += "Vui lòng không bỏ trống!";
+    }
+    if(email.value!= ""){
+        if(reg_email.test(email.value) == false){
+            i+= "Email không hợp lệ.<br/>";
+        }
+        else
+            i+= "Không được bỏ trống email.<br/>";
+    }
+    if(sdt.value !=""){
+        if(sdt.value.length>10){
+            i += "Điện thoại có 10 số!"
+        }
+        i += "Vui lòng không bỏ trống!";
+    }
+    
+}
+//end catch---------------------------------------------------------//
 !(function($) {
   "use strict";
 

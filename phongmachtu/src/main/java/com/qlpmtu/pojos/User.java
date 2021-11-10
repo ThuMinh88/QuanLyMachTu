@@ -65,6 +65,10 @@ public class User implements Serializable{
 //    @JoinColumn(name = "address_id", referencedColumnName = "id")
 //    private BenhNhan address; // biến address này sẽ trùng  với giá trị  mappedBy trong Class User 
 //    
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+//    private YTa ytaID;
+    
     public User() {
     }
 
@@ -177,5 +181,5 @@ public class User implements Serializable{
         this.file = file;
     }
 
-   
+
 }

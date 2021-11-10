@@ -53,13 +53,13 @@ public class UserController {
      }
      
      @PostMapping("/register")
-     public String register(Model model, @ModelAttribute(value = "taikhoan") User user,@ModelAttribute (value = "benhnhan") BenhNhan bn) {
+     public String register(Model model, @ModelAttribute(value = "taikhoan") User user) {
         if (user.getPassword().isEmpty() 
                 || !user.getPassword().equals(user.getConfirmPassword())) 
             model.addAttribute("errMsg", "Mật khẩu không khớp!!!");
         else {
-            if (this.userDetailsService.addUser(user) == true && this.benhNhanService.addName(bn) == true) {
-                return "redirect:/login";
+            if (this.userDetailsService.addUser(user) == true) {
+                return "forward:/appointment";
             }
             
             model.addAttribute("errMsg", "Đăng kí không thành công!");
