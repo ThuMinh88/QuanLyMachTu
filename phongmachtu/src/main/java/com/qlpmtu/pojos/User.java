@@ -40,18 +40,18 @@ public class User implements Serializable{
     private int idTK;
     
     //@Basic(optional = false)
-    @NotNull(message="{user.NotNull}")
-    @Size(min = 5, max = 25, message="{user.username.lenErr}")
+//    @NotNull(message="{user.NotNull}")
+//    @Size(min = 5, max = 25, message="{user.username.lenErr}")
     private String username;
     
     @Basic(optional = false)
-    @NotEmpty(message="{user.empty.emptyErr}")
+//    @NotEmpty(message="{user.empty.emptyErr}")
 //    @Size(min = 1, max = 45, message="{user.password.lenErr}")
     @Column(name = "password")
     private String password;
     
     @Transient
-    @NotEmpty(message="{user.empty.emptyErr}")
+//    @NotEmpty(message="{user.empty.emptyErr}")
     private String confirmPassword;
     
     @Column (name="user_role")

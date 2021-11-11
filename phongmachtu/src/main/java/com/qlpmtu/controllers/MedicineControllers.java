@@ -41,9 +41,6 @@ public class MedicineControllers {
     @Autowired
     private NhaCungCapService nhaCungCapService;
     
-    
-  
-    
     @ModelAttribute
     public void danhMuc(Model model){
         model.addAttribute("danhmucthuoc", this.danhMucThuocService.getDanhMucThuocs());

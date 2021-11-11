@@ -50,25 +50,19 @@ public class UserController {
         return "login";
      }
      
-//     @RequestMapping(value = "/login", method = RequestMethod.POST)
-//     public String loginShow(Model model,  @ModelAttribute(value = "user") @Valid User user, BindingResult result, Authentication a){
-//        return "login?err";
-//     }
-     
       @RequestMapping(value = "/register", method = RequestMethod.GET)
      public String registerView(Model model){
          model.addAttribute("taikhoan", new User());
-         model.addAttribute("benhnhan",new BenhNhan());
          return "register";
      }
      
      @PostMapping("/register")
-     public String register(Model model, @ModelAttribute(value = "taikhoan") User user,@ModelAttribute (value = "benhnhan") BenhNhan bn) {
+     public String register(Model model, @ModelAttribute(value = "taikhoan") User user) {
         if (user.getPassword().isEmpty() 
                 || !user.getPassword().equals(user.getConfirmPassword())) 
             model.addAttribute("errMsg", "Mật khẩu không khớp!!!");
         else {
-            if (this.userDetailsService.addUser(user) == true && this.benhNhanService.addName(bn) == true) {
+            if (this.userDetailsService.addUser(user) == true) {
                 return "redirect:/login";
             }
             
@@ -77,14 +71,7 @@ public class UserController {
         
         return "register";
     }
-//     @PostMapping("/register")
-//     public String registerBN(Model model,@ModelAttribute (value = "taikhoan") BenhNhan bn) {
-//            if ( this.benhNhanService.addName(bn) == true) {
-//                return "redirect:/login";
-//            }
-//            model.addAttribute("benhnha", "Đăng kí không thành công!");
-//        return "register";
-//    }
+
      
 // @PostMapping("/register")
 //    public String register(Model model, 

@@ -35,7 +35,7 @@ public class AdminControllers {
     private YTaService yTaService;
     
 
-    @GetMapping("/")
+    @GetMapping("/admin-index")
     public String indexAD(Model model) {
         model.addAttribute("benhnhan", this.benhNhanService.getBenhNhans());
         return "admin-index";

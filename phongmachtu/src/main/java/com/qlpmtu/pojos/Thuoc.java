@@ -34,10 +34,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Table(name = "thuoc")
 public class Thuoc implements Serializable{
 
-    
-
-   
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idthuoc")

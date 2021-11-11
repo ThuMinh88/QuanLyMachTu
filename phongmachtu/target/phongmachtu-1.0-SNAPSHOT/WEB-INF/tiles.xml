@@ -9,6 +9,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
 "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+    <!--====================== BASE =================================-->
     <!--Trang base admin-->
     <definition name="baseLayout" template="/WEB-INF/layout/admin/base.jsp">
         <put-attribute name="title" value="OTC Admin - Dashboard" />
@@ -26,6 +27,7 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
         <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
     </definition>
     
+    <!--====================== HOME =================================-->
     <!--Trang index-->
     <definition name="index" extends="baseUser">
         <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"/>
@@ -47,6 +49,17 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="appointment" extends="baseUser">
         <put-attribute name="content" value="/WEB-INF/jsp/appointment.jsp"/>
     </definition>
+    
+     <!--Trang Liên Hệ-->
+    <definition name="contact" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/contact.jsp"/>
+    </definition>
+    
+    <!--Trang Về chúng tôi-->
+    <definition name="about" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/about.jsp"/>
+    </definition>
+    <!--==================== ADMIN ===========================================-->
     
     <!--Trang chủ-->
     <definition name="admin-index" extends="baseLayout">
@@ -72,32 +85,25 @@ Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="admin-medicine" extends="baseLayout">
         <put-attribute name="content" value="/WEB-INF/jsp/admin-medicine.jsp"/>
     </definition>
-     <!--Trang add thuốc-->
-    <definition name="create-medicine" extends="baseLayout">
-        <put-attribute name="content" value="/WEB-INF/jsp/create-medicine.jsp"/>
-    </definition>
-     <!--Trang Liên Hệ-->
-    <definition name="contact" extends="baseUser">
-        <put-attribute name="content" value="/WEB-INF/jsp/contact.jsp"/>
-    </definition>
-    <!--Trang Về chúng tôi-->
-    <definition name="about" extends="baseUser">
-        <put-attribute name="content" value="/WEB-INF/jsp/about.jsp"/>
-    </definition>
     
+    
+    <!--================= DOCTOR ==============================================-->
     <definition name="doctor-index" extends="baseLayout">
         <put-attribute name="title" value="OTC Doctor - Dashboard" />
         <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar-doctor.jsp" />
         <put-attribute name="content" value="/WEB-INF/jsp/doctor-index.jsp"/>
     </definition>
     
-<!--    Trang bác sĩ
-    <definition name="doctor-index" extends="baseLayout">
-        <put-attribute name="title" value="OTC Doctor - Dashboard" />
-        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/{ở đây gắn 
-                                    cái jsp sidebar-doctor khi cắt cái side ra }.jsp" />
-        <put-attribute name="content" value="/WEB-INF/jsp/doctor-index.jsp"/>
-    </definition>-->
+    <!--================= CREATE ==============================================-->
+     <!--Trang add thuốc-->
+    <definition name="create-medicine" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/create-medicine.jsp"/>
+    </definition>
+    
+    <!--Trang them yta-->
+    <definition name="create-nurse" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/create-nurse.jsp"/>
+    </definition>
     
 </tiles-definitions>
 
