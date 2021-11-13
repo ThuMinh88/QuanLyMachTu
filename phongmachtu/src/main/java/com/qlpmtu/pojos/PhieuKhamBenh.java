@@ -6,10 +6,14 @@
 package com.qlpmtu.pojos;
 
 import java.util.Date;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -21,66 +25,54 @@ import javax.persistence.Table;
 public class PhieuKhamBenh {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPhieuKB;
-    private int idBS;
-    private int idBN;
-    private Date ngaykham;
+    private int idphieuKB;
+    @Column(name="idBN")
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "idBN", referencedColumnName = "idBN")
+    private int bn_id;
+    private Date created_date;
     private Boolean xacnhan;
 
     /**
-     * @return the idPhieuKB
+     * @return the idphieuKB
      */
-    public int getIdPhieuKB() {
-        return idPhieuKB;
+    public int getIdphieuKB() {
+        return idphieuKB;
     }
 
     /**
-     * @param idPhieuKB the idPhieuKB to set
+     * @param idphieuKB the idphieuKB to set
      */
-    public void setIdPhieuKB(int idPhieuKB) {
-        this.idPhieuKB = idPhieuKB;
+    public void setIdphieuKB(int idphieuKB) {
+        this.idphieuKB = idphieuKB;
     }
 
     /**
-     * @return the idBS
+     * @return the bn_id
      */
-    public int getIdBS() {
-        return idBS;
+    public int getBn_id() {
+        return bn_id;
     }
 
     /**
-     * @param idBS the idBS to set
+     * @param bn_id the bn_id to set
      */
-    public void setIdBS(int idBS) {
-        this.idBS = idBS;
+    public void setBn_id(int bn_id) {
+        this.bn_id = bn_id;
     }
 
     /**
-     * @return the idBN
+     * @return the created_date
      */
-    public int getIdBN() {
-        return idBN;
+    public Date getCreated_date() {
+        return created_date;
     }
 
     /**
-     * @param idBN the idBN to set
+     * @param created_date the created_date to set
      */
-    public void setIdBN(int idBN) {
-        this.idBN = idBN;
-    }
-
-    /**
-     * @return the ngaykham
-     */
-    public Date getNgaykham() {
-        return ngaykham;
-    }
-
-    /**
-     * @param ngaykham the ngaykham to set
-     */
-    public void setNgaykham(Date ngaykham) {
-        this.ngaykham = ngaykham;
+    public void setCreated_date(Date created_date) {
+        this.created_date = created_date;
     }
 
     /**
@@ -96,4 +88,7 @@ public class PhieuKhamBenh {
     public void setXacnhan(Boolean xacnhan) {
         this.xacnhan = xacnhan;
     }
+
+    
+    
 }

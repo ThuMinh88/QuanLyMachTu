@@ -21,7 +21,7 @@ public class MyAccessDeniedHandler implements AccessDeniedHandler{
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException ade) throws IOException, ServletException {
         System.out.println("Test == " + request.getContextPath());
-                response.sendRedirect("/?accessDenied&next=" + request.getContextPath());
+                response.sendRedirect(request.getContextPath()+ "/admin/");
 
     }
     

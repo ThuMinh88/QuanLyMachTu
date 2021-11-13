@@ -14,4 +14,7 @@ import java.util.List;
  */
 public interface BacSiRepository {
     List<BacSi> getBacSis();
+    BacSi getBSById(int bsID);
+    boolean addBs(BacSi bs);
+    boolean deleteBs(int bsID);
 }

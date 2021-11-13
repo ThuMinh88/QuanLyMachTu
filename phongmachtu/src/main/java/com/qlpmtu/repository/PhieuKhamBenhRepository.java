@@ -13,6 +13,11 @@ import java.util.List;
  * @author ACER
  */
 public interface PhieuKhamBenhRepository {
+
     List<PhieuKhamBenh> getPhieuKhamBenhs();
+
+    boolean addBNID(PhieuKhamBenh id);
+
+    long countPhieuChuaKham();
     
 }

@@ -6,14 +6,18 @@
 package com.qlpmtu.pojos;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -31,7 +35,7 @@ public class BenhNhan{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idBN")
-    private int idBenhNhan;
+    private int idBN;
     
     @Column(name = "hoBN")
     private String firstname;
@@ -53,37 +57,55 @@ public class BenhNhan{
     
     private String diachi;
     
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "idTK")
     private User userID;
     
-    @Column(name = "benhan")
-    private String benhAn;
+    @OneToMany(mappedBy = "bn_id", fetch = FetchType.EAGER)
+    private Collection<PhieuKhamBenh> phieuKhamBenhCollection;
 
-    public BenhNhan(){
-        
-    }
-    public BenhNhan(Integer id){
-        this.idBenhNhan = id;
-    }
-    
-   
-    
     /**
-     * @return the idBenhNhan
+     * @return the idBN
      */
-    public int getIdBenhNhan() {
-        return idBenhNhan;
+    public int getIdBN() {
+        return idBN;
     }
 
     /**
-     * @param idBenhNhan the idBenhNhan to set
+     * @param idBN the idBN to set
      */
-    public void setIdBenhNhan(int idBenhNhan) {
-        this.idBenhNhan = idBenhNhan;
+    public void setIdBN(int idBN) {
+        this.idBN = idBN;
     }
 
-    
+    /**
+     * @return the firstname
+     */
+    public String getFirstname() {
+        return firstname;
+    }
+
+    /**
+     * @param firstname the firstname to set
+     */
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    /**
+     * @return the lastname
+     */
+    public String getLastname() {
+        return lastname;
+    }
+
+    /**
+     * @param lastname the lastname to set
+     */
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     /**
      * @return the gioiTinh
      */
@@ -141,34 +163,6 @@ public class BenhNhan{
     }
 
     /**
-     * @return the avt
-//     */
-//    public String getAvt() {
-//        return avt;
-//    }
-
-    /**
-     * @param avt the avt to set
-//     */
-//    public void setAvt(String avt) {
-//        this.avt = avt;
-//    }
-
-    /**
-     * @return the benhAn
-     */
-    public String getBenhAn() {
-        return benhAn;
-    }
-
-    /**
-     * @param benhAn the benhAn to set
-     */
-    public void setBenhAn(String benhAn) {
-        this.benhAn = benhAn;
-    }
-
-    /**
      * @return the diachi
      */
     public String getDiachi() {
@@ -181,20 +175,6 @@ public class BenhNhan{
     public void setDiachi(String diachi) {
         this.diachi = diachi;
     }
-//
-//    /**
-//     * @return the userId
-//     */
-//    public User getUserId() {
-//        return userId;
-//    }
-//
-//    /**
-//     * @param userId the userId to set
-//     */
-//    public void setUserId(User userId) {
-//        this.userId = userId;
-//    }
 
     /**
      * @return the userID
@@ -211,31 +191,18 @@ public class BenhNhan{
     }
 
     /**
-     * @return the firstname
+     * @return the phieuKhamBenhCollection
      */
-    public String getFirstname() {
-        return firstname;
+    public Collection<PhieuKhamBenh> getPhieuKhamBenhCollection() {
+        return phieuKhamBenhCollection;
     }
 
     /**
-     * @param firstname the firstname to set
+     * @param phieuKhamBenhCollection the phieuKhamBenhCollection to set
      */
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setPhieuKhamBenhCollection(Collection<PhieuKhamBenh> phieuKhamBenhCollection) {
+        this.phieuKhamBenhCollection = phieuKhamBenhCollection;
     }
-
-    /**
-     * @return the lastname
-     */
-    public String getLastname() {
-        return lastname;
-    }
-
-    /**
-     * @param lastname the lastname to set
-     */
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
+    
 
 }

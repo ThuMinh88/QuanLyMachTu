@@ -70,4 +70,11 @@ public class UserReponsitoryImpl implements UserReponsitory {
         return q.getResultList();
     }
 
+    @Override
+    public List<User> getListUsers() {
+        Session s = sessionFactory.getObject().getCurrentSession();
+       javax.persistence.Query q = s.createQuery("From User");
+       return q.getResultList();
+    }
+
 }

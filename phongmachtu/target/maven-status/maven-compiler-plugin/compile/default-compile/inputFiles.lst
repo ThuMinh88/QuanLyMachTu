@@ -10,6 +10,7 @@ C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\q
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\UserService.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\UserController.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\DoctorControllers.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\PhieuKhamBenhRepositoryImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Thuoc.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\DanhMucThuocService.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BacSiServiceImpl.java
@@ -20,9 +21,12 @@ C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\q
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\NhaCungCapServiceImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\LogoutHandler.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\SecurityWebAppInitializer.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\HoaDonRepository.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\YTaRepositoryImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\BenhNhanServiceImpl.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\DoctorHomeController.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\HibernateConfig.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\formatter\BenhNhanFormatter.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\MyAccessDeniedHandler.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\PhieuKhamBenh.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\TilesConfig.java
@@ -36,7 +40,9 @@ C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\q
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\YTaService.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\configs\handlers\LoginSuccessHandler.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\NhaCungCapService.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\HoaDon.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\Admin.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\formatter\UserFormatter.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\DanhMucThuocRepositoryImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\valitator\UserPassValidator.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\formatter\NhaCungCapFormatter.java
@@ -44,11 +50,15 @@ C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\q
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\YTa.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\BenhNhanRepositoryImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\NhaCungCapRepositoryImpl.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\HoaDonService.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\PhieuKhamBenhService.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\UserServiceImpl.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\PhieuKhamBenhServiceIpml.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\ChiTietDonThuoc.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DonThuoc.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\NhaCungCapRepository.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\BacSi.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\impl\HoaDonRepositoryImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\PhieuKhamBenhRepository.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\YTaServiceImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\NhaCungCap.java
@@ -58,4 +68,5 @@ C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\q
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\pojos\DanhMucThuoc.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\ThuocRepository.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\controllers\AdminControllers.java
+C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\service\ipml\HoaDonServiceImpl.java
 C:\Users\ACER\Documents\GitHub\QuanLyMachTu_DoAn\phongmachtu\src\main\java\com\qlpmtu\repository\UserReponsitory.java

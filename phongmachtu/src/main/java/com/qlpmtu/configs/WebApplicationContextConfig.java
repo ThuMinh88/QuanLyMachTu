@@ -7,8 +7,10 @@ package com.qlpmtu.configs;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.qlpmtu.formatter.BenhNhanFormatter;
 import com.qlpmtu.formatter.DanhMucThuocFormatter;
 import com.qlpmtu.formatter.NhaCungCapFormatter;
+import com.qlpmtu.formatter.UserFormatter;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -76,6 +78,8 @@ public class WebApplicationContextConfig implements WebMvcConfigurer {
     public void addFormatters(FormatterRegistry registry) {
         registry.addFormatter(new DanhMucThuocFormatter());
         registry.addFormatter(new NhaCungCapFormatter());
+        registry.addFormatter(new BenhNhanFormatter());
+        registry.addFormatter(new UserFormatter());
     }
     
 

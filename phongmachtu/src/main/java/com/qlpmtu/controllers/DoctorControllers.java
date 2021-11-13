@@ -5,14 +5,20 @@
  */
 package com.qlpmtu.controllers;
 
+import com.qlpmtu.pojos.BacSi;
 import com.qlpmtu.service.BacSiService;
 import com.qlpmtu.service.DanhMucThuocService;
 import com.qlpmtu.service.ThuocService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -20,6 +26,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author ACER
  */
 @Controller
+@Transactional
+//@RequestMapping("/admin")
 public class DoctorControllers{
    @Autowired
    private BacSiService bacSiService;
@@ -31,9 +39,25 @@ public class DoctorControllers{
         model.addAttribute("bacsi", this.bacSiService.getBacSis());
         return "admin-doctor";
     }
-     @GetMapping("/doctor-index")
-    public String doctor(Model model, @RequestParam(value = "kw", required = false, defaultValue = "") String kw) {
-         model.addAttribute("thuoc", this.thuocService.getThuocs(kw));
-        return "doctor-index";
+    @RequestMapping(value="create-doctor",method = RequestMethod.GET)
+    public String createView(Model model){
+        model.addAttribute("bacsi", new BacSi());
+        return "create-doctor";
+    }
+    @PostMapping("create-doctor")
+    public String create(Model model, @ModelAttribute(value="bacsi") BacSi bs){
+        if(!this.bacSiService.addBs(bs)){
+            model.addAttribute("errMsg", "Có lỗi khi thêm!");
+            return "/create-doctor";
+        }
+            return "redirect:/admin-doctor";
+    }
+    @RequestMapping(value="/admin-doctor/deleted/{idBS}",method = RequestMethod.GET)
+    public String deleteDoctor(@PathVariable("idBS") int id){
+        BacSi bs = bacSiService.getBSById(id);
+        if(bs != null){
+            this.bacSiService.deleteBs(id);
+        }
+        return "redirect:/admin-doctor";
     }
 }

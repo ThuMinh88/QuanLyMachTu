@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 @ControllerAdvice
+//@RequestMapping("/admin")
 public class MedicineControllers {
 //    
    

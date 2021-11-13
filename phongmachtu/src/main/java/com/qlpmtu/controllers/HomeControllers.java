@@ -43,7 +43,7 @@ public class HomeControllers {
     @ModelAttribute
     public void commonAttrs(Model model, HttpSession session) {
         model.addAttribute("currentUser", session.getAttribute("currentUser"));
-//        model.addAttribute("user", this.userService.getUsers());
+        model.addAttribute("taikhoan", this.userService.getListUsers());
     }
 
     @RequestMapping(value = "/appointment", method = RequestMethod.GET)

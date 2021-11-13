@@ -16,4 +16,5 @@ public interface UserReponsitory {
     User getUserById(int userId);
     boolean addUser(User user);
     List<User> getUsers(String username);
+    List<User> getListUsers();
 }

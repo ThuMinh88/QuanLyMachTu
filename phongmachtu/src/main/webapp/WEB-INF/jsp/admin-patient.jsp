@@ -49,13 +49,13 @@
                             <th>Số điện thoại</th>
                             <th>Email</th>
                             <th>Địa Chỉ</th> 
-                            <th></th>
+                            
                         </tr>
                     </tfoot>
                     <tbody>
                         <j:forEach var="t" items="${benhnhan}">
                             <tr>
-                                <td>${t.idBenhNhan}</td>
+                                <td>${t.idBN}</td>
                                 <td>${t.hoBenhNhan}</td>
                                 <td>${t.tenBenhNhan}</td>
                                 <td>${t.benhAn}</td>
@@ -64,7 +64,7 @@
                                 <td>${t.sdt}</td>
                                 <td>${t.email}</td>
                                 <td>${t.diaChi}</td>
-                                <td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm" role="button">Xóa</a></td>
+                                
                             </tr>
                     </j:forEach>
                     </tbody>

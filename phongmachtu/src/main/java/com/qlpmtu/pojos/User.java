@@ -7,14 +7,17 @@ package com.qlpmtu.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -45,13 +48,11 @@ public class User implements Serializable{
     private String username;
     
     @Basic(optional = false)
-//    @NotEmpty(message="{user.empty.emptyErr}")
 //    @Size(min = 1, max = 45, message="{user.password.lenErr}")
     @Column(name = "password")
     private String password;
     
     @Transient
-//    @NotEmpty(message="{user.empty.emptyErr}")
     private String confirmPassword;
     
     @Column (name="user_role")
@@ -61,10 +62,10 @@ public class User implements Serializable{
     @Transient
     private MultipartFile file;
     
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "address_id", referencedColumnName = "id")
-//    private BenhNhan address; // biến address này sẽ trùng  với giá trị  mappedBy trong Class User 
-//    
+  
+    @OneToMany(mappedBy = "userID", fetch = FetchType.EAGER)
+    private Collection<BenhNhan> benhNhanCollection;
+    
     public User() {
     }
 
@@ -175,6 +176,20 @@ public class User implements Serializable{
      */
     public void setFile(MultipartFile file) {
         this.file = file;
+    }
+
+    /**
+     * @return the benhNhanCollection
+     */
+    public Collection<BenhNhan> getBenhNhanCollection() {
+        return benhNhanCollection;
+    }
+
+    /**
+     * @param benhNhanCollection the benhNhanCollection to set
+     */
+    public void setBenhNhanCollection(Collection<BenhNhan> benhNhanCollection) {
+        this.benhNhanCollection = benhNhanCollection;
     }
 
    

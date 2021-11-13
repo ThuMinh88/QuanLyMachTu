@@ -86,4 +86,9 @@ public class UserServiceImpl implements UserService {
                         user.getPassword(), auth);
     }
 
+    @Override
+    public List<User> getListUsers() {
+        return this.userReponsitory.getListUsers();
+    }
+
 }

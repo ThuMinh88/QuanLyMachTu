@@ -56,7 +56,10 @@
                                 <td>${t.sdt}</td>
                                 <td>${t.email}</td>
                                 <td>${t.diaChi}</td>
-                                <td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm" role="button">Xóa</a></td>
+                                <td class="align-items-center d-none d-sm-block btn btn-sm btn-primary shadow-sm">
+                                    <a style="color: #ffffff;" href="${pageContext.request.contextPath}/admin-doctor/deleted/${t.idBS}" onclick="return confirm('Are you sure?')"><i class="fas fa-trash"></i></a>
+                                    
+                                </td>
                             </tr>
                     </j:forEach>
                     </tbody>

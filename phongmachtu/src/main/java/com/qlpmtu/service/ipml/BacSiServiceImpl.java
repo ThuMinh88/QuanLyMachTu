@@ -25,5 +25,20 @@ public class BacSiServiceImpl implements BacSiService{
     public List<BacSi> getBacSis() {
         return this.bacSiRepository.getBacSis();
     }
+
+    @Override
+    public BacSi getBSById(int bsID) {
+        return this.bacSiRepository.getBSById(bsID);
+    }
+
+    @Override
+    public boolean addBs(BacSi bs) {
+        return this.bacSiRepository.addBs(bs);
+    }
+
+    @Override
+    public boolean deleteBs(int bsID) {
+        return this.bacSiRepository.deleteBs(bsID);
+    }
     
 }
