@@ -1,0 +1,340 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 13, 2021, 5:03:29 PM
+    Author     : ACER
+*/
+
+/* ----------------------------------------------------------------------------------------- */
+.align-content-center {
+    align-content: center !important;
+}
+
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+    padding: 10px;
+}
+
+header {
+    background-image:
+        linear-gradient(to right bottom, rgba(142, 158, 252, .8), rgba(28, 62, 255, .8)),
+        url('../img/background1.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    height: 85vh;
+    clip-path: ellipse(60% 60% at 50% 33%);
+
+}
+
+.mb-4,
+.my-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #858796;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.35rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.logo {
+    height: 70px;
+}
+
+.logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    animation-name: animationtest;
+    animation-duration: 2s;
+}
+
+.heading-primary__main {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    display: block;
+    font-size: 62px;
+    font-weight: 400;
+    letter-spacing: 15px;
+}
+
+.heading-primary__sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 18px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 100px;
+    font-size: 16px;
+    position: relative;
+}
+
+.btn-white {
+    color: #777777;
+    background-color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    transition: all .4s;
+    z-index: -1;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.container {
+    min-width: 992px !important;
+}
+.text-center {
+    text-align: center !important;
+  }
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 576px) {
+
+    .container,
+    .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+
+@keyframes animationtest {
+    0% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+
+    80% {
+        transform: translate(0, -20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+footer.sticky-footer {
+    padding: 2rem 0;
+    flex-shrink: 0;
+}
+
+footer.sticky-footer .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+}
+
+body.sidebar-toggled footer.sticky-footer {
+    width: 100%;
+}

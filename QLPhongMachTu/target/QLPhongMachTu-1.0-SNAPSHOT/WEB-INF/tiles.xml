@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!--====================== BASE =================================-->
+    <!--Trang base admin-->
+    <definition name="baseLayout" template="/WEB-INF/layout/admin/base.jsp">
+        <put-attribute name="title" value="OTC Admin - Dashboard" />
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar.jsp" />
+        <put-attribute name="header" value="/WEB-INF/layout/admin/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/admin/footer.jsp" />
+        <put-attribute name="content" value="..."/>
+    </definition>
+    
+    <!--Trang base -->
+    <definition name="baseUser" template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="Mạch Tư OTC" />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content" value="..."/>
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+    <definition name="baseAdmin" template="/WEB-INF/layout/admin/base-admin.jsp">
+        <put-attribute name="content" value="..."/>
+    </definition>
+    <!--====================== HOME =================================-->
+    <!--Trang index-->
+    <definition name="index" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp"/>
+    </definition>
+    
+    <!--Trang login-->
+    <definition name="login" extends="baseUser">
+        <put-attribute name="header" value="/WEB-INF/layout/login-header.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/login.jsp"/>
+    </definition>
+    
+    <!--Trang login-->
+    <definition name="register" extends="baseUser">
+        <put-attribute name="header" value="/WEB-INF/layout/login-header.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/register.jsp"/>
+    </definition>
+    
+    <!--Trang Đăng kí-->
+    <definition name="appointment" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/appointment.jsp"/>
+        
+    </definition>
+    
+     <!--Trang Liên Hệ-->
+    <definition name="contact" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/contact.jsp"/>
+    </definition>
+    
+    <!--Trang Về chúng tôi-->
+    <definition name="about" extends="baseUser">
+        <put-attribute name="content" value="/WEB-INF/jsp/about.jsp"/>
+    </definition>
+    <!--==================== ADMIN ===========================================-->
+    
+    <!--Trang chủ-->
+    <definition name="index-admin" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/index-admin.jsp"/>
+    </definition>
+    
+     <!--Trang báo cáo-->
+     <definition name="report_patient" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/report_patient.jsp"/>
+    </definition>
+     <definition name="report_bill" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/report_bill.jsp"/>
+    </definition>
+    
+    <!--Trang admin bệnh nhân-->
+    <definition name="admin-patient" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-patient.jsp"/>
+    </definition>
+    
+    <!--Trang admin bác sĩ-->
+    <definition name="admin-doctor" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-doctor.jsp"/>
+    </definition>
+ 
+    <!--Trang admin y tá-->
+    <definition name="admin-nurse" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-nurse.jsp"/>
+    </definition>
+
+    <!--Trang admin thuốc-->
+    <definition name="admin-medicine" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/admin-medicine.jsp"/>
+    </definition>
+    
+    <!--Trang admin lịch trực bs-->
+    <definition name="scheDoctor" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/scheDoctor.jsp"/>
+    </definition>
+    
+    
+    <!--================= DOCTOR ==============================================-->
+    <definition name="index-doctor" extends="baseLayout">
+        <put-attribute name="title" value="OTC Doctor - Dashboard" />
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar-doctor.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/index-doctor.jsp"/>
+    </definition>
+    
+    <!--Trang admin lịch trực bs-->
+    <definition name="medicine_doctor" extends="baseLayout">
+        <put-attribute name="title" value="OTC Doctor - Dashboard" />
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar-doctor.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/medicine_doctor.jsp"/>
+    </definition>
+    
+    <!--================= NURSE ==============================================-->
+    <definition name="index-nurse" extends="baseLayout">
+        <put-attribute name="title" value="OTC Nurse - Dashboard" />
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar-nurse.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/index-nurse.jsp"/>
+    </definition>
+    
+    <!--================= CREATE ==============================================-->
+     <!--Trang add thuốc-->
+    <definition name="create-medicine" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/create-medicine.jsp"/>
+    </definition>
+    
+    <!--Trang them yta-->
+    <definition name="create-nurse" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/create-nurse.jsp"/>
+    </definition>
+    
+    <!--Trang them doctor-->
+    <definition name="create-doctor" extends="baseLayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/create-doctor.jsp"/>
+    </definition>
+    <!--=================  ==============================================-->
+    <!--Trang bệnh án -->
+    <definition name="medical_record" extends="baseLayout">
+        <put-attribute name="title" value="OTC Doctor - Dashboard" />
+        <put-attribute name="sidebar" value="/WEB-INF/layout/admin/sidebar-doctor.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/medical_record.jsp"/>
+    </definition>
+    
+</tiles-definitions>
+
